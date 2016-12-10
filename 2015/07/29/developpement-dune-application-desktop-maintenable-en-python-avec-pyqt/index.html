@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Développement d&#39;une application desktop maintenable en Python avec PyQt | Nbcorp Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Bonjour à tous,
+aujourd’hui je vais faire un petit tutoriel sur comment faire une application desktop en Python avec PyQt. Pour ceux qui ne connaissent pas Qt, c’est une librairie graphique qui fourni">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Développement d'une application desktop maintenable en Python avec PyQt">
+<meta property="og:url" content="https://nightbr.github.io/nbcorp-blog/2015/07/29/developpement-dune-application-desktop-maintenable-en-python-avec-pyqt/index.html">
+<meta property="og:site_name" content="Nbcorp Blog">
+<meta property="og:description" content="Bonjour à tous,
+aujourd’hui je vais faire un petit tutoriel sur comment faire une application desktop en Python avec PyQt. Pour ceux qui ne connaissent pas Qt, c’est une librairie graphique qui fourni">
+<meta property="og:image" content="https://nightbr.github.io/nbcorp-blog/images/QtDesigner.png">
+<meta property="og:image" content="https://nightbr.github.io/nbcorp-blog/images/scaffolding.png">
+<meta property="og:updated_time" content="2016-12-10T23:16:35.040Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Développement d'une application desktop maintenable en Python avec PyQt">
+<meta name="twitter:description" content="Bonjour à tous,
+aujourd’hui je vais faire un petit tutoriel sur comment faire une application desktop en Python avec PyQt. Pour ceux qui ne connaissent pas Qt, c’est une librairie graphique qui fourni">
+<meta name="twitter:image" content="https://nightbr.github.io/nbcorp-blog/images/QtDesigner.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Nbcorp Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/nbcorp-blog/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/nbcorp-blog/" id="logo">Nbcorp Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/nbcorp-blog/">Home</a>
+        
+          <a class="main-nav-link" href="/nbcorp-blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://nightbr.github.io/nbcorp-blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-developpement-dune-application-desktop-maintenable-en-python-avec-pyqt" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/nbcorp-blog/2015/07/29/developpement-dune-application-desktop-maintenable-en-python-avec-pyqt/" class="article-date">
+  <time datetime="2015-07-29T12:11:55.000Z" itemprop="datePublished">2015-07-29</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/nbcorp-blog/categories/Developpement/">Développement</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Développement d&#39;une application desktop maintenable en Python avec PyQt
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Bonjour à tous,</p>
+<p>aujourd’hui je vais faire un petit tutoriel sur comment faire une application desktop en Python avec PyQt. Pour ceux qui ne connaissent pas <a href="http://www.qt.io/" target="_blank" rel="external">Qt</a>, c’est une librairie graphique qui fournit pas mal d’outils sympas pour faire des interfaces graphiques. Vraiment puissant et sympa à utiliser, je le conseille vivement pour des projets de toutes tailles qui ont besoin d’avoir un client desktop.</p>
+<a id="more"></a>
+<p>Une question légitime est “Pourquoi choisir de faire une application desktop en <a href="https://www.python.org/" target="_blank" rel="external">Python</a> ??”. En effet, c’est une bonne question. Dans un premier temps je dirais que le Python est multiplateforme et donc votre application fonctionnera sur Windows, Mac OS X et Linux ayant Python. De plus, personnellement je fais des applications desktop en Python principalement pour venir communiquer en Serial avec des systèmes embarqués (Communication Serial avec une Arduino, MBED ou un micro STM32). Ces applications me permettent d’avoir une interface graphique sympa pour venir configurer une Arduino par exemple. Le langage est vraiment facile à utiliser et performant, et couplé avec <a href="https://pip.pypa.io/en/stable/" target="_blank" rel="external">pip</a> le gestionnaire de dépendances on fait des projets vraiment propres en un temps record ;).</p>
+<p>Maintenant que j’ai introduit le sujet, je vous propose de mettre en place une application très simple avec Python et PyQt ainsi qu’un environnement facile à maintenir.</p>
+<h2 id="1-Prerequis"><a href="#1-Prerequis" class="headerlink" title="1. Prérequis"></a>1. Prérequis</h2><p>Pour ceux qui développent sous Linux :</p>
+<ul>
+<li>Python 2.7.x</li>
+<li>PyQt4 : <code>sudo apt-get install pyqt4-dev</code></li>
+<li>PyQt4 Tools : <code>sudo apt-get install pyqt4-dev-tools</code></li>
+<li>Qt-designer : <code>sudo apt-get install qt4-designer</code></li>
+</ul>
+<p>Pour ceux sous Windows :</p>
+<ul>
+<li>Python 2.7.x</li>
+<li>PyQt4 : <a href="http://www.riverbankcomputing.co.uk/software/pyqt/download" target="_blank" rel="external">http://www.riverbankcomputing.co.uk/software/pyqt/download</a></li>
+</ul>
+<p>Pour ma part, je travaille sous Linux Mint 17.10 et pour coder le super éditeur Sublime Text 3.</p>
+<h2 id="2-Qt-Designer"><a href="#2-Qt-Designer" class="headerlink" title="2. Qt Designer"></a>2. Qt Designer</h2><p>Qt Designer est l’outil qui vous permet de construire vos interfaces graphiques aussi appelé GUI (Graphical User Interface) ou simplement UI (User Interface).</p>
+<p><img src="/images/QtDesigner.png" alt="QtDesigner"></p>
+<p>A partir de cet outil, vous êtes capable de créer très facilement et rapidement vos interfaces graphique. Du simple drag&amp;drop et le tour est joué ! Ensuite, Qt designer enregistre l’UI au format .ui qui est simplement un format xml spécifique à Qt.</p>
+<p>Une fois notre interface réalisée, on peut à partir du fichier .ui réaliser une classe Python pour PyQt. On réalise ceci grâce à <strong>pyuic4</strong>.</p>
+<pre><code>pyuic4 monfichier.ui -o monfichier.py
+</code></pre><p>Et on récupère une classe Python qui correspond à notre UI et qu’on va pouvoir manipuler en Python. Il faut à présent faire un petit scaffolding pour notre projet afin de faciliter l’intégration de l’UI dans notre app.</p>
+<h2 id="3-Scaffolding"><a href="#3-Scaffolding" class="headerlink" title="3. Scaffolding"></a>3. Scaffolding</h2><p>Je propose un scaffolding comme ceci : (note : en <strong>gras</strong> les dossiers en <em>italique</em> les fichiers)</p>
+<ul>
+<li><strong>project</strong><ul>
+<li><em>appName.py</em></li>
+<li><em>App.py</em></li>
+<li><em>MainUI.py</em></li>
+<li><em><strong>init</strong>.py</em></li>
+<li><strong>UI</strong><ul>
+<li><strong>myui.ui</strong></li>
+<li><strong>MyUI.py</strong></li>
+<li><strong>build.sh</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="/images/scaffolding.png" alt="scaffolding"></p>
+<p>Pour expliquer le principe, tous ce qui est lié à mon UI est dans le dossier<strong> UI</strong> (*.ui, mes classes Python générées à partir des *.ui, ressources tel que Images, …). Mon script <em>build.sh</em> me permet de convertir mon fichier <em>myui.ui</em> en <em>MyUI.py</em>.</p>
+<p><em>build.sh</em></p>
+<pre><code>#!/bin/bash
+
+pyuic4 myui.ui -o MyUI.py
+#pyrcc4 ressources.qrc -o Ressources_rc.py
+</code></pre><p>La magie s’opère ensuite dans le fichier MainUI.py ; en effet, je vais créer une classe MainUI qui va hériter de la classe MyUI du fichier MyUI.py</p>
+<p>Grâce à ce système, si je fais des modifications sur mon UI via Qt designer, je n’ai qu’à exécuter mon script build.sh pour mettre à jour mon UI.</p>
+<h2 id="4-Organisation-du-code"><a href="#4-Organisation-du-code" class="headerlink" title="4. Organisation du code"></a>4. Organisation du code</h2><p>Le fichier MainUI.py hérite de notre MyUI.py généré depuis le fichier de Qt Designer :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/python</span></div><div class="line"><span class="comment"># -*- coding: UTF-8 -*-</span></div><div class="line"><span class="comment">#***************************************************************************#</span></div><div class="line"><span class="comment">#                                                                           #</span></div><div class="line"><span class="comment">#                              MainUI.py                                    #</span></div><div class="line"><span class="comment">#                                                                           #</span></div><div class="line"><span class="comment">#***************************************************************************#</span></div><div class="line"><span class="comment">#                                                                           #</span></div><div class="line"><span class="comment"># Class MainUI extend from Ui_MainWindow which is generated with #</span></div><div class="line"><span class="comment"># py2uic and QtDesigner.                                                    #</span></div><div class="line"><span class="comment">#                                                                           #</span></div><div class="line"><span class="comment">#                                                                           #</span></div><div class="line"><span class="comment">#***************************************************************************#</span></div><div class="line"><span class="comment"># Création     : 29.07.2015  T. Benoit       Version 1.0                    #</span></div><div class="line"><span class="comment"># Vérifié      : @@.@@.@@@@  T. Benoit                                      #</span></div><div class="line"><span class="comment"># Modification :                                                            #</span></div><div class="line"><span class="comment">#***************************************************************************#</span></div><div class="line"></div><div class="line"><span class="keyword">import</span> sys</div><div class="line"><span class="keyword">import</span> UI.MyUI <span class="keyword">as</span> MyUI</div><div class="line"><span class="keyword">from</span> PyQt4 <span class="keyword">import</span> QtCore, QtGui</div><div class="line"></div><div class="line"><span class="keyword">try</span>:</div><div class="line">    _fromUtf8 = QtCore.QString.fromUtf8</div><div class="line"><span class="keyword">except</span> AttributeError:</div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">_fromUtf8</span><span class="params">(s)</span>:</span></div><div class="line">        <span class="keyword">return</span> s</div><div class="line"></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MainUI</span><span class="params">(QtGui.QMainWindow, MyUI.Ui_MainWindow)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, parent=None)</span>:</span></div><div class="line">        super(MainUI, self).__init__(parent)</div><div class="line">        self.setupUi(self)</div><div class="line"></div><div class="line">        <span class="comment"># customize UI here</span></div><div class="line"></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">(self)</span>:</span></div><div class="line">        self.show()</div></pre></td></tr></table></figure>
+<p>On peut ici personnaliser notre UI avec des comportements particuliers comme lier un bouton pour ouvrir une boite de dialogue, … On met ici des fonctionnalités liées à l’UI mais pas encore des fonctionnalités liées à l’application en elle même. Les fonctionnalités liées à l’application vont se trouver dans le fichier App.py !</p>
+<p><strong>App.py</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/python</span></div><div class="line"><span class="comment"># -*- coding: UTF-8 -*-</span></div><div class="line"><span class="comment">#***************************************************************************#</span></div><div class="line"><span class="comment">#                                                                           #</span></div><div class="line"><span class="comment">#                                 App.py                                    #</span></div><div class="line"><span class="comment">#                                                                           #</span></div><div class="line"><span class="comment">#***************************************************************************#</span></div><div class="line"><span class="comment">#                                                                           #</span></div><div class="line"><span class="comment"># Class App which contains application logic                                #</span></div><div class="line"><span class="comment">#                                                                           #</span></div><div class="line"><span class="comment">#                                                                           #</span></div><div class="line"><span class="comment">#                                                                           #</span></div><div class="line"><span class="comment">#***************************************************************************#</span></div><div class="line"><span class="comment"># Création     : 29.07.2015  T. Benoit       Version 1.0                    #</span></div><div class="line"><span class="comment"># Vérifié      : @@.@@.@@@@  T. Benoit                                      #</span></div><div class="line"><span class="comment"># Modification :                                                            #</span></div><div class="line"><span class="comment">#***************************************************************************#</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">from</span> MainUI <span class="keyword">import</span> MainUI</div><div class="line"><span class="keyword">from</span> PyQt4 <span class="keyword">import</span> QtCore, QtGui</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">#---------------------------------------------------------------------------#</span></div><div class="line"></div><div class="line"><span class="keyword">try</span>:</div><div class="line">    _fromUtf8 = QtCore.QString.fromUtf8</div><div class="line"><span class="keyword">except</span> AttributeError:</div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">_fromUtf8</span><span class="params">(s)</span>:</span></div><div class="line">        <span class="keyword">return</span> s</div><div class="line"></div><div class="line"><span class="comment">#---------------------------------------------------------------------------#</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span>:</span></div><div class="line"></div><div class="line">    gui = <span class="keyword">None</span></div><div class="line">    app = <span class="keyword">None</span></div><div class="line">    counter = <span class="number">0</span></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, guiClass, appClass)</span>:</span></div><div class="line">        self.gui = guiClass</div><div class="line">        self.app = appClass</div><div class="line">        self.counter = <span class="number">0</span></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">setup</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="string">""" setup functionnality """</span></div><div class="line"></div><div class="line">        self.gui.pushButton.clicked.connect(self.action)</div><div class="line"></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="string">""" Main execution for App """</span></div><div class="line">        self.setup()</div><div class="line">        self.gui.main()</div><div class="line"></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">action</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="string">""" action when I click the push Button """</span></div><div class="line">        self.gui.textEdit.append(<span class="string">"Hello world: "</span>+str(self.counter))</div><div class="line">        self.counter = self.counter + <span class="number">1</span></div></pre></td></tr></table></figure>
+<p>On retrouve ici la base de notre application, on injecte la classe avec l’ui afin de pouvoir manipuler les objets de l’interface graphique. La méthode setup permet d’initialiser les connect qui sont des listeners d’événement pour PyQt. On y attache des fonctions callbacks qui seront exécutés si l’événement survient. Par exemple ici j’ai attaché l’événement clicked sur le bouton pushButton à la méthode action de la classe. Dans cette méthode, je remplis le textEdit avec hello world et un compteur.</p>
+<p>La class App est le coeur de votre application, c’est là où vous mettez la logique de votre app.</p>
+<p>Enfin, il faut le fichier de l’application qui sera à exécuter :</p>
+<p><em>appName.py</em></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/python</span></div><div class="line"><span class="comment"># -*- coding: UTF-8 -*-</span></div><div class="line"><span class="comment">#***************************************************************************#</span></div><div class="line"><span class="comment">#                                                                           #</span></div><div class="line"><span class="comment">#                              appName.py                                   #</span></div><div class="line"><span class="comment">#                                                                           #</span></div><div class="line"><span class="comment">#***************************************************************************#</span></div><div class="line"><span class="comment">#                                                                           #</span></div><div class="line"><span class="comment"># Main file for our Application                                             #</span></div><div class="line"><span class="comment">#                                                                           #</span></div><div class="line"><span class="comment">#                                                                           #</span></div><div class="line"><span class="comment">#                                                                           #</span></div><div class="line"><span class="comment">#***************************************************************************#</span></div><div class="line"><span class="comment"># Création     : 29.07.2015  T. Benoit       Version 1.0                    #</span></div><div class="line"><span class="comment"># Vérifié      : @@.@@.@@@@  T. Benoit                                      #</span></div><div class="line"><span class="comment"># Modification :                                                            #</span></div><div class="line"><span class="comment">#***************************************************************************#</span></div><div class="line"></div><div class="line"><span class="keyword">import</span> sys</div><div class="line"><span class="keyword">from</span> MainUI <span class="keyword">import</span> MainUI</div><div class="line"><span class="keyword">from</span> App <span class="keyword">import</span> App</div><div class="line"><span class="keyword">from</span> PyQt4 <span class="keyword">import</span> QtCore, QtGui</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></div><div class="line">    app = QtGui.QApplication(sys.argv) <span class="comment">#create a Qt app</span></div><div class="line">    gui = MainUI() <span class="comment"># create GUI instance</span></div><div class="line">    myApp = App(gui,app)</div><div class="line">    myApp.main() <span class="comment"># init the App</span></div><div class="line">    sys.exit(app.exec_()) <span class="comment"># lauch Qt App</span></div><div class="line"></div><div class="line"><span class="comment">#---------------------------------------------------------------------------#</span></div><div class="line"><span class="comment">#                                Main                                       #</span></div><div class="line"><span class="comment">#---------------------------------------------------------------------------#</span></div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__==<span class="string">'__main__'</span>:</div><div class="line">    main()</div></pre></td></tr></table></figure>
+<p>Dans un premier temps, on créé une Qt app puis on instancie notre GUI qui vient du MainUI et enfin on instancie notre classe App en lui injectant le gui et l’app Qt pour qu’elle puisse les manipuler. Le must serait d’instancier la classe MainUI dans un thread et l’App dans un autre thread car si vous avez des fonctions dans la classe App qui prennent du temps ou qui sont bloquantes, cela va freezer l’interface graphique… pas cool… Mais dans la majorité des cas, on clique sur un bouton et on fait une action simple non bloquante dans ce cas là pas besoin de séparer l’App et l’UI dans deux threads différents.</p>
+<p>Et voilà, vous n’avez plus qu’à exécuter votre application : python appName.py</p>
+<h2 id="5-Pour-aller-plus-loin…"><a href="#5-Pour-aller-plus-loin…" class="headerlink" title="5. Pour aller plus loin…"></a>5. Pour aller plus loin…</h2><p>Maintenant qu’on a notre application, on voudrait bien en faire un .exe sous Windows afin de livrer une app packagée. Pour cela, il existe l’utilitaire <a href="http://www.py2exe.org/" target="_blank" rel="external">py2exe</a> qui est franchement bien !</p>
+<p>Il faut juste créer un fichier setup.py à la racine de notre projet avec la configuration de notre application :</p>
+<p><em>setup.py</em></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> distutils.core <span class="keyword">import</span> setup</div><div class="line"><span class="keyword">import</span> sys</div><div class="line"><span class="keyword">import</span> py2exe</div><div class="line"></div><div class="line">setup(name=<span class="string">"appName"</span>,</div><div class="line">      version=<span class="string">"1.0.0"</span>,</div><div class="line">      author=<span class="string">"Titouan Benoit"</span>,</div><div class="line">      author_email=<span class="string">"titouan.benoit@gmx.fr"</span>,</div><div class="line">      windows=[&#123;<span class="string">"script"</span>: <span class="string">"appName.py"</span>&#125;],</div><div class="line">      options=&#123;<span class="string">"py2exe"</span>: &#123;<span class="string">'bundle_files'</span>: <span class="number">1</span>, <span class="string">'compressed'</span>: <span class="keyword">True</span>,<span class="string">"includes"</span>: [<span class="string">"sip"</span>], <span class="string">"dll_excludes"</span>: [<span class="string">"MSVCP90.dll"</span>, <span class="string">"HID.DLL"</span>, <span class="string">"w9xpopen.exe"</span>]&#125;&#125;)</div></pre></td></tr></table></figure>
+<p>Et ensuite exécuter :</p>
+<pre><code>python setup.py py2exe
+</code></pre><p>Attention, cela fonctionne uniquement sous Windows bien entendu et il vous faut Microsoft Visual C++ 2008 : <a href="http://www.microsoft.com/fr-FR/download/details.aspx?id=29" target="_blank" rel="external">http://www.microsoft.com/fr-FR/download/details.aspx?id=29</a></p>
+<p>Vous avez ensuite un appName.exe et un library.zip que vous pouvez distribuer !</p>
+<h2 id="6-References-et-code-source"><a href="#6-References-et-code-source" class="headerlink" title="6. Références et code source"></a>6. Références et code source</h2><p>Voici les deux endroits où vous pourrez trouver des informations pour PyQt :</p>
+<ul>
+<li><a href="http://pyqt.sourceforge.net/Docs/PyQt4/index.html" target="_blank" rel="external">http://pyqt.sourceforge.net/Docs/PyQt4/index.html</a></li>
+<li><a href="http://pyqt.sourceforge.net/Docs/PyQt4/classes.html" target="_blank" rel="external">http://pyqt.sourceforge.net/Docs/PyQt4/classes.html</a></li>
+</ul>
+<p>Après n’hésitez pas à chercher sur Google ;)</p>
+<p>Voici les sources du projet présenté dans ce post : <a href="http://blog.nbcorp.fr/wp-content/uploads/2015/07/example-py.zip" target="_blank" rel="external">example-py</a></p>
+<p>Voili voilou ! Si vous avez des questions où des remarques, n’hésitez pas à les poster en commentaire !</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://nightbr.github.io/nbcorp-blog/nbcorp-blog/2015/07/29/developpement-dune-application-desktop-maintenable-en-python-avec-pyqt/" data-id="ciwjsvbxr0000bcn82wqtq4ar" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/nbcorp-blog/tags/PyQt/">PyQt</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/nbcorp-blog/tags/Python/">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/nbcorp-blog/tags/QtDesigner/">QtDesigner</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/nbcorp-blog/tags/Scaffolding/">Scaffolding</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/nbcorp-blog/tags/application/">application</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/nbcorp-blog/tags/maintenable/">maintenable</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/nbcorp-blog/tags/py2exe/">py2exe</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/nbcorp-blog/2015/02/15/oha-open-home-automation/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ancien</strong>
+      <div class="article-nav-title">OHA : Open Home Automation</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Catégories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/nbcorp-blog/categories/Domotique/">Domotique</a></li><li class="category-list-item"><a class="category-list-link" href="/nbcorp-blog/categories/Developpement/">Développement</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Mot-clés</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/API/">API</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/Arduino/">Arduino</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/Automation/">Automation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/Connecte/">Connecté</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/Home/">Home</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/IoT/">IoT</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/OHA/">OHA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/Open/">Open</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/PRT5/">PRT5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/Projet/">Projet</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/PyQt/">PyQt</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/QtDesigner/">QtDesigner</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/RF433/">RF433</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/Scaffolding/">Scaffolding</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/application/">application</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/domotique/">domotique</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/maintenable/">maintenable</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/py2exe/">py2exe</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <div class="widget tagcloud">
+      <a href="/nbcorp-blog/tags/API/" style="font-size: 10px;">API</a> <a href="/nbcorp-blog/tags/Arduino/" style="font-size: 10px;">Arduino</a> <a href="/nbcorp-blog/tags/Automation/" style="font-size: 10px;">Automation</a> <a href="/nbcorp-blog/tags/Connecte/" style="font-size: 10px;">Connecté</a> <a href="/nbcorp-blog/tags/Home/" style="font-size: 10px;">Home</a> <a href="/nbcorp-blog/tags/IoT/" style="font-size: 10px;">IoT</a> <a href="/nbcorp-blog/tags/OHA/" style="font-size: 10px;">OHA</a> <a href="/nbcorp-blog/tags/Open/" style="font-size: 10px;">Open</a> <a href="/nbcorp-blog/tags/PRT5/" style="font-size: 10px;">PRT5</a> <a href="/nbcorp-blog/tags/Projet/" style="font-size: 10px;">Projet</a> <a href="/nbcorp-blog/tags/PyQt/" style="font-size: 10px;">PyQt</a> <a href="/nbcorp-blog/tags/Python/" style="font-size: 20px;">Python</a> <a href="/nbcorp-blog/tags/QtDesigner/" style="font-size: 10px;">QtDesigner</a> <a href="/nbcorp-blog/tags/RF433/" style="font-size: 10px;">RF433</a> <a href="/nbcorp-blog/tags/Scaffolding/" style="font-size: 10px;">Scaffolding</a> <a href="/nbcorp-blog/tags/application/" style="font-size: 10px;">application</a> <a href="/nbcorp-blog/tags/domotique/" style="font-size: 10px;">domotique</a> <a href="/nbcorp-blog/tags/maintenable/" style="font-size: 10px;">maintenable</a> <a href="/nbcorp-blog/tags/py2exe/" style="font-size: 10px;">py2exe</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/nbcorp-blog/archives/2015/07/">juillet 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/nbcorp-blog/archives/2015/02/">février 2015</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Articles récents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/nbcorp-blog/2015/07/29/developpement-dune-application-desktop-maintenable-en-python-avec-pyqt/">Développement d&#39;une application desktop maintenable en Python avec PyQt</a>
+          </li>
+        
+          <li>
+            <a href="/nbcorp-blog/2015/02/15/oha-open-home-automation/">OHA : Open Home Automation</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 Titouan BENOIT<br>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/nbcorp-blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/nbcorp-blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/nbcorp-blog/fancybox/jquery.fancybox.css">
+  <script src="/nbcorp-blog/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/nbcorp-blog/js/script.js"></script>
+
+  </div>
+</body>
+</html>

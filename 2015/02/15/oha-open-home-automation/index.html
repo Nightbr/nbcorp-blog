@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>OHA : Open Home Automation | Nbcorp Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="En dernière année d’école d’ingénieur, nous avions la possibilité de réaliser un projet technique sur le sujet de notre choix. Il se trouve que j’avais depuis longtemps envie de développer ma propre s">
+<meta property="og:type" content="article">
+<meta property="og:title" content="OHA : Open Home Automation">
+<meta property="og:url" content="https://nightbr.github.io/nbcorp-blog/2015/02/15/oha-open-home-automation/index.html">
+<meta property="og:site_name" content="Nbcorp Blog">
+<meta property="og:description" content="En dernière année d’école d’ingénieur, nous avions la possibilité de réaliser un projet technique sur le sujet de notre choix. Il se trouve que j’avais depuis longtemps envie de développer ma propre s">
+<meta property="og:image" content="https://nightbr.github.io/nbcorp-blog/images/schema-principale.png">
+<meta property="og:image" content="https://nightbr.github.io/nbcorp-blog/images/oha-maquette-1.jpg">
+<meta property="og:updated_time" content="2016-12-10T23:17:31.392Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="OHA : Open Home Automation">
+<meta name="twitter:description" content="En dernière année d’école d’ingénieur, nous avions la possibilité de réaliser un projet technique sur le sujet de notre choix. Il se trouve que j’avais depuis longtemps envie de développer ma propre s">
+<meta name="twitter:image" content="https://nightbr.github.io/nbcorp-blog/images/schema-principale.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Nbcorp Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/nbcorp-blog/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/nbcorp-blog/" id="logo">Nbcorp Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/nbcorp-blog/">Home</a>
+        
+          <a class="main-nav-link" href="/nbcorp-blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://nightbr.github.io/nbcorp-blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-oha-open-home-automation" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/nbcorp-blog/2015/02/15/oha-open-home-automation/" class="article-date">
+  <time datetime="2015-02-15T10:25:47.000Z" itemprop="datePublished">2015-02-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/nbcorp-blog/categories/Domotique/">Domotique</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      OHA : Open Home Automation
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>En dernière année d’école d’ingénieur, nous avions la possibilité de réaliser un projet technique sur le sujet de notre choix. Il se trouve que j’avais depuis longtemps envie de développer ma propre solution de domotique. En effet, je regardais souvent du côté de <a href="http://blog.encausse.net/s-a-r-a-h/" target="_blank" rel="external">S.A.R.A.H.</a> ou encore <a href="http://gladysproject.com/accueil" target="_blank" rel="external">Gladys</a>. Il en existe plein d’autre qui offre souvent la couche logicielle et qui sont Open Source mais je n’ai jamais vraiment trouvé de solution complète Open Hardware et Open Source.</p>
+<a id="more"></a>
+<p>Mais dans un premier temps, un petit rappel sur ce qu’est la domotique :</p>
+<p><em>La domotique est l’ensemble des techniques de l’électronique, de physique du bâtiment, d’automatisme, de l’informatique et des télécommunications utilisées dans les bâtiments, plus ou moins “interopérables” et permettant de centraliser le contrôle des différents systèmes et sous-systèmes de la maison et de l’entreprise (chauffage, volets roulants, porte de garage, portail d’entrée, prises électriques, etc.).</em></p>
+<p><strong>Mais qu’est ce que OHA :</strong></p>
+<p>Open Home Automation est un projet de domotique Open Source innovant qui permettra de contrôler les équipements de la maison, volets, lampes, chauffages par l’intermédiaire de son smartphone, tablette, PC, Laptop, etc. OHA propose une solution domotique qui ne nécessitera pas de changement important dans les installations de la maison, comme c’est le cas pour les solutions domotiques du marché. De plus chacun (particulier ou entreprise) pourra construire et ajouter son propre équipement connecté grâce à la Centrale Intelligente OHA qui détecte automatiquement les nouveaux équipements domotiques compatibles. OHA n’est pas qu’un simple système domotique propriétaire, c’est un univers d’objets connectés où chacun peut ajouter le sien.</p>
+<p>Pour OHA, nous voulions développer un système ouvert offrant une bonne base pour toutes les applications de domotique. Voici un schéma fonctionnel du système :</p>
+<p><img src="/images/schema-principale.png" alt="schéma principale"></p>
+<p>Cette article présentera globalement le système mais je ferais sûrement d’autre article plus technique qui détaillera les différentes parties du système.</p>
+<p>Nous êtions une équipe de 4 personnes (2 personnes sur le logiciel API+client web et 2 personnes sur le reste : développement du daemon python + des modules Arduino). Ce projet a duré environ 6 mois (de Septembre 2014 à Janvier 2015) et nous nous étions fixé comme objectif d’avoir un serveur communicant avec un module simple de lampe connectée.</p>
+<p>Voici la maquette finale du système :</p>
+<p><img src="/images/oha-maquette-1.jpg" alt="oha-maquette-1"></p>
+<p>Voici quelques vidéos (playlist Youtube) de démonstration qui montrent les fonctionnalités de base de système.</p>
+<iframe allowfullscreen frameborder="0" height="315" src="https://www.youtube.com/embed/videoseries?list=PLsTK3RYVBmuDBkJ-arTuKlfv2TFFZgNXX" width="560"></iframe>
+
+
+<p>Et sinon comme le système est Open Source, retrouvez tous nos documents sur Dropbox et le code sur notre serveur git :</p>
+<ul>
+<li>OHA Dropbox : <a href="https://www.dropbox.com/sh/elvth88n0mhhb0w/AADJKHIOZmS7qmZaeL1MDOVha?dl=0" target="_blank" rel="external">https://www.dropbox.com/sh/elvth88n0mhhb0w/AADJKHIOZmS7qmZaeL1MDOVha?dl=0</a></li>
+<li>git OHA Web client : <a href="http://git.nbcorp.fr/oha/oha-web-client" target="_blank" rel="external">http://git.nbcorp.fr/oha/oha-web-client</a></li>
+<li>git OHA API : <a href="http://git.nbcorp.fr/oha/oha-api" target="_blank" rel="external">http://git.nbcorp.fr/oha/oha-api</a></li>
+<li>git OHA Python Core : <a href="http://git.nbcorp.fr/oha/oha-python-core" target="_blank" rel="external">http://git.nbcorp.fr/oha/oha-python-core</a></li>
+<li><p>git OHA Module Core : <a href="http://git.nbcorp.fr/oha/oha-module-core" target="_blank" rel="external">http://git.nbcorp.fr/oha/oha-module-core</a></p>
+<p>Voilà, ça sera tout pour cette article d’introduction, je vais refaire d’autre article sur le sujet pour présenter l’architecture globale du système, les différents composants (API, Daemon, …).</p>
+</li>
+</ul>
+<p>Si vous avez des questions, n’hésitez pas à les poser en commentaire ;)</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://nightbr.github.io/nbcorp-blog/nbcorp-blog/2015/02/15/oha-open-home-automation/" data-id="ciwjsvbxw0001bcn8jemkhosj" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/nbcorp-blog/tags/API/">API</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/nbcorp-blog/tags/Arduino/">Arduino</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/nbcorp-blog/tags/Automation/">Automation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/nbcorp-blog/tags/Connecte/">Connecté</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/nbcorp-blog/tags/Home/">Home</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/nbcorp-blog/tags/IoT/">IoT</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/nbcorp-blog/tags/OHA/">OHA</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/nbcorp-blog/tags/Open/">Open</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/nbcorp-blog/tags/PRT5/">PRT5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/nbcorp-blog/tags/Projet/">Projet</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/nbcorp-blog/tags/Python/">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/nbcorp-blog/tags/RF433/">RF433</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/nbcorp-blog/tags/domotique/">domotique</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/nbcorp-blog/2015/07/29/developpement-dune-application-desktop-maintenable-en-python-avec-pyqt/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Récent</strong>
+      <div class="article-nav-title">
+        
+          Développement d&#39;une application desktop maintenable en Python avec PyQt
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Catégories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/nbcorp-blog/categories/Domotique/">Domotique</a></li><li class="category-list-item"><a class="category-list-link" href="/nbcorp-blog/categories/Developpement/">Développement</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Mot-clés</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/API/">API</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/Arduino/">Arduino</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/Automation/">Automation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/Connecte/">Connecté</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/Home/">Home</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/IoT/">IoT</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/OHA/">OHA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/Open/">Open</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/PRT5/">PRT5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/Projet/">Projet</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/PyQt/">PyQt</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/QtDesigner/">QtDesigner</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/RF433/">RF433</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/Scaffolding/">Scaffolding</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/application/">application</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/domotique/">domotique</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/maintenable/">maintenable</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/py2exe/">py2exe</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <div class="widget tagcloud">
+      <a href="/nbcorp-blog/tags/API/" style="font-size: 10px;">API</a> <a href="/nbcorp-blog/tags/Arduino/" style="font-size: 10px;">Arduino</a> <a href="/nbcorp-blog/tags/Automation/" style="font-size: 10px;">Automation</a> <a href="/nbcorp-blog/tags/Connecte/" style="font-size: 10px;">Connecté</a> <a href="/nbcorp-blog/tags/Home/" style="font-size: 10px;">Home</a> <a href="/nbcorp-blog/tags/IoT/" style="font-size: 10px;">IoT</a> <a href="/nbcorp-blog/tags/OHA/" style="font-size: 10px;">OHA</a> <a href="/nbcorp-blog/tags/Open/" style="font-size: 10px;">Open</a> <a href="/nbcorp-blog/tags/PRT5/" style="font-size: 10px;">PRT5</a> <a href="/nbcorp-blog/tags/Projet/" style="font-size: 10px;">Projet</a> <a href="/nbcorp-blog/tags/PyQt/" style="font-size: 10px;">PyQt</a> <a href="/nbcorp-blog/tags/Python/" style="font-size: 20px;">Python</a> <a href="/nbcorp-blog/tags/QtDesigner/" style="font-size: 10px;">QtDesigner</a> <a href="/nbcorp-blog/tags/RF433/" style="font-size: 10px;">RF433</a> <a href="/nbcorp-blog/tags/Scaffolding/" style="font-size: 10px;">Scaffolding</a> <a href="/nbcorp-blog/tags/application/" style="font-size: 10px;">application</a> <a href="/nbcorp-blog/tags/domotique/" style="font-size: 10px;">domotique</a> <a href="/nbcorp-blog/tags/maintenable/" style="font-size: 10px;">maintenable</a> <a href="/nbcorp-blog/tags/py2exe/" style="font-size: 10px;">py2exe</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/nbcorp-blog/archives/2015/07/">juillet 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/nbcorp-blog/archives/2015/02/">février 2015</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Articles récents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/nbcorp-blog/2015/07/29/developpement-dune-application-desktop-maintenable-en-python-avec-pyqt/">Développement d&#39;une application desktop maintenable en Python avec PyQt</a>
+          </li>
+        
+          <li>
+            <a href="/nbcorp-blog/2015/02/15/oha-open-home-automation/">OHA : Open Home Automation</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 Titouan BENOIT<br>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/nbcorp-blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/nbcorp-blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/nbcorp-blog/fancybox/jquery.fancybox.css">
+  <script src="/nbcorp-blog/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/nbcorp-blog/js/script.js"></script>
+
+  </div>
+</body>
+</html>
