@@ -1,6 +1,5 @@
 ---
-ID: 83
-post_title: 'Développement d&rsquo;une application desktop maintenable en Python avec PyQt'
+title: 'Développement d&rsquo;une application desktop maintenable en Python avec PyQt'
 author: Titouan BENOIT
 post_date: 2015-07-29 14:11:55
 post_excerpt: ""
@@ -113,7 +112,7 @@ class MainUI(QtGui.QMainWindow, MyUI.Ui_MainWindow):
 
         # customize UI here
 
- 
+
     def main(self):
         self.show()
 </pre>
@@ -167,7 +166,7 @@ class App:
 
     def setup(self):
         """ setup functionnality """
-        
+
         self.gui.pushButton.clicked.connect(self.action)
 
 

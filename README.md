@@ -1,3 +1,3 @@
 # nbcorp-blog
 
-<http://blog.nbcorp.fr>
+With Hexo
