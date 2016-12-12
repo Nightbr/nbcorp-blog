@@ -18,6 +18,7 @@ tags:
     - RF433
 categories:
     - Domotique
+comments: true
 ---
 En dernière année d'école d'ingénieur, nous avions la possibilité de réaliser un projet technique sur le sujet de notre choix. Il se trouve que j'avais depuis longtemps envie de développer ma propre solution de domotique. En effet, je regardais souvent du côté de [S.A.R.A.H.](http://blog.encausse.net/s-a-r-a-h/) ou encore [Gladys](http://gladysproject.com/accueil). Il en existe plein d'autre qui offre souvent la couche logicielle et qui sont Open Source mais je n'ai jamais vraiment trouvé de solution complète Open Hardware et Open Source.
 
@@ -34,7 +35,7 @@ Open Home Automation est un projet de domotique Open Source innovant qui permett
 
 Pour OHA, nous voulions développer un système ouvert offrant une bonne base pour toutes les applications de domotique. Voici un schéma fonctionnel du système :
 
-![schéma principale](/images/schema-principale.png)
+![schéma principale](/nbcorp-blog/images/schema-principale.png)
 
 Cette article présentera globalement le système mais je ferais sûrement d'autre article plus technique qui détaillera les différentes parties du système.
 
@@ -42,7 +43,7 @@ Nous êtions une équipe de 4 personnes (2 personnes sur le logiciel API+client 
 
 Voici la maquette finale du système :
 
-![oha-maquette-1](/images/oha-maquette-1.jpg)
+![oha-maquette-1](/nbcorp-blog/images/oha-maquette-1.jpg)
 
 Voici quelques vidéos (playlist Youtube) de démonstration qui montrent les fonctionnalités de base de système.
 

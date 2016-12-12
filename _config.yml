@@ -7,7 +7,7 @@ title: Nbcorp Blog
 subtitle:
 description:
 author: Titouan BENOIT
-language: fr
+language: "fr-FR"
 timezone: Europe/Paris
 
 # URL
@@ -34,14 +34,14 @@ titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
   enable: true
   line_number: true
   auto_detect: false
-  tab_replace:
+  tab_replace: true
 
 # Category & Tag
 default_category: uncategorized
@@ -63,7 +63,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: tranquilpeak
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -71,3 +71,9 @@ deploy:
   type: git
   repo: git@github.com:Nightbr/nbcorp-blog.git
   branch: gh-pages
+
+# RSS Feeds
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20

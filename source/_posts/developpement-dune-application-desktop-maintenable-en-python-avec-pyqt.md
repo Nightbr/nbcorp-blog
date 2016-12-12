@@ -43,7 +43,7 @@ Pour ma part, je travaille sous Linux Mint 17.10 et pour coder le super éditeur
 
 Qt Designer est l'outil qui vous permet de construire vos interfaces graphiques aussi appelé GUI (Graphical User Interface) ou simplement UI (User Interface).
 
-![QtDesigner](/images/QtDesigner.png)
+![QtDesigner](/nbcorp-blog/images/QtDesigner.png)
 
 A partir de cet outil, vous êtes capable de créer très facilement et rapidement vos interfaces graphique. Du simple drag&drop et le tour est joué ! Ensuite, Qt designer enregistre l'UI au format .ui qui est simplement un format xml spécifique à Qt.
 
@@ -67,7 +67,7 @@ Je propose un scaffolding comme ceci : (note : en **gras** les dossiers en *ital
         * **MyUI.py**
         * **build.sh**
 
-![scaffolding](/images/scaffolding.png)
+![scaffolding](/nbcorp-blog/images/scaffolding.png)
 
 Pour expliquer le principe, tous ce qui est lié à mon UI est dans le dossier<strong> UI</strong> (\*.ui, mes classes Python générées à partir des \*.ui, ressources tel que Images, ...). Mon script *build.sh* me permet de convertir mon fichier <em>myui.ui</em> en *MyUI.py*.
 
