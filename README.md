@@ -4,8 +4,8 @@ With Hexo
 
 # ToDo
 
+- [x] code hightlights theme
 - [ ] finish configure theme tranquilpeak
-- [ ] code hightlights theme
 - [ ] writting workflow
 - [ ] moar doc here
 - [ ] begin to write!

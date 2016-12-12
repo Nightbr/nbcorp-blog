@@ -11,14 +11,13 @@ tags:
     - Home
     - IoT
     - OHA
-    - Open
+    - OpenSource
     - Projet
     - PRT5
     - Python
     - RF433
 categories:
     - Domotique
-comments: true
 ---
 En dernière année d'école d'ingénieur, nous avions la possibilité de réaliser un projet technique sur le sujet de notre choix. Il se trouve que j'avais depuis longtemps envie de développer ma propre solution de domotique. En effet, je regardais souvent du côté de [S.A.R.A.H.](http://blog.encausse.net/s-a-r-a-h/) ou encore [Gladys](http://gladysproject.com/accueil). Il en existe plein d'autre qui offre souvent la couche logicielle et qui sont Open Source mais je n'ai jamais vraiment trouvé de solution complète Open Hardware et Open Source.
 

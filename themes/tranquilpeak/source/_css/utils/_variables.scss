@@ -6,6 +6,7 @@ $open-sans:            'Open Sans';
 $open-sans-sans-serif: 'Open Sans', sans-serif;
 $merriweather-serif:   'Merriweather', serif;
 $menlo:                 Menlo;
+$code-font:             Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
 
 $font-family-base: $open-sans-sans-serif;
 
@@ -13,14 +14,14 @@ $font-families: (
    // base
    'headings':          $open-sans-sans-serif,
    // components
-   'code':              $menlo,
+   'code':              $code-font,
    'caption':           $merriweather-serif,
    'image-gallery':     $open-sans,
    'post-header-cover': $merriweather-serif,
    'post-meta':         $open-sans-sans-serif,
    'post-content':      $merriweather-serif,
    'post-excerpt-link': $open-sans-sans-serif,
-   'highlight':         $menlo,
+   'highlight':         $code-font,
    // layout
    'sidebar':           $open-sans-sans-serif
 );
