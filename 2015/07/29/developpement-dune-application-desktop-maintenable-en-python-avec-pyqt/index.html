@@ -1,101 +1,250 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="fr-FR">
+    
 <head>
-  <meta charset="utf-8">
-  
-  <title>Développement d&#39;une application desktop maintenable en Python avec PyQt | Nbcorp Blog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Bonjour à tous,
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Nbcorp Blog">
+    <title>Développement d&#39;une application desktop maintenable en Python avec PyQt - Nbcorp Blog</title>
+    <meta name="author" content="Titouan BENOIT">
+    
+    
+    
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="/nbcorp-blog/atom.xml">
+    
+    <meta name="description" content="Bonjour à tous,
 aujourd’hui je vais faire un petit tutoriel sur comment faire une application desktop en Python avec PyQt. Pour ceux qui ne connaissent pas Qt, c’est une librairie graphique qui fourni">
-<meta property="og:type" content="article">
+<meta property="og:type" content="blog">
 <meta property="og:title" content="Développement d'une application desktop maintenable en Python avec PyQt">
-<meta property="og:url" content="https://nightbr.github.io/nbcorp-blog/2015/07/29/developpement-dune-application-desktop-maintenable-en-python-avec-pyqt/index.html">
+<meta property="og:url" content="https://nightbr.github.io/2015/07/29/developpement-dune-application-desktop-maintenable-en-python-avec-pyqt/index.html">
 <meta property="og:site_name" content="Nbcorp Blog">
 <meta property="og:description" content="Bonjour à tous,
 aujourd’hui je vais faire un petit tutoriel sur comment faire une application desktop en Python avec PyQt. Pour ceux qui ne connaissent pas Qt, c’est une librairie graphique qui fourni">
 <meta property="og:image" content="https://nightbr.github.io/nbcorp-blog/images/QtDesigner.png">
 <meta property="og:image" content="https://nightbr.github.io/nbcorp-blog/images/scaffolding.png">
-<meta property="og:updated_time" content="2016-12-10T23:16:35.040Z">
+<meta property="og:updated_time" content="2016-12-14T10:51:44.966Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Développement d'une application desktop maintenable en Python avec PyQt">
 <meta name="twitter:description" content="Bonjour à tous,
 aujourd’hui je vais faire un petit tutoriel sur comment faire une application desktop en Python avec PyQt. Pour ceux qui ne connaissent pas Qt, c’est une librairie graphique qui fourni">
 <meta name="twitter:image" content="https://nightbr.github.io/nbcorp-blog/images/QtDesigner.png">
-  
-    <link rel="alternate" href="/atom.xml" title="Nbcorp Blog" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/nbcorp-blog/css/style.css">
-  
-
+<meta name="twitter:creator" content="@titouan_benoit">
+    
+    
+        
+    
+    
+        <meta property="og:image" content="https://www.gravatar.com/avatar/0fedc968af6402c6ab176088bb995c91?s=640"/>
+    
+    
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/nbcorp-blog/assets/css/style-iqh8bfwz2d7rdoh7rjosff4ppbvbehyfzdyuzboxzbztq4aekrsjxnarnmm0.min.css">
+    <!--STYLES END-->
+    
+    
 </head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/nbcorp-blog/" id="logo">Nbcorp Blog</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/nbcorp-blog/">Home</a>
-        
-          <a class="main-nav-link" href="/nbcorp-blog/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://nightbr.github.io/nbcorp-blog"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main"><article id="post-developpement-dune-application-desktop-maintenable-en-python-avec-pyqt" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/nbcorp-blog/2015/07/29/developpement-dune-application-desktop-maintenable-en-python-avec-pyqt/" class="article-date">
-  <time datetime="2015-07-29T12:11:55.000Z" itemprop="datePublished">2015-07-29</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/nbcorp-blog/categories/Developpement/">Développement</a>
-  </div>
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
 
-  </div>
-  <div class="article-inner">
+
     
-    
-      <header class="article-header">
         
-  
-    <h1 class="article-title" itemprop="name">
-      Développement d&#39;une application desktop maintenable en Python avec PyQt
+    
+
+<header id="header" data-behavior="3">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <h1 class="header-title">
+        <a class="header-title-link" href="/nbcorp-blog/ ">Nbcorp Blog</a>
     </h1>
-  
-
-      </header>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Bonjour à tous,</p>
+        
+            <a  class="header-right-picture "
+                href="#about">
+        
+        
+            <img class="header-picture" src="https://www.gravatar.com/avatar/0fedc968af6402c6ab176088bb995c91?s=90"/>
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+    
+
+<nav id="sidebar" data-behavior="3">
+    
+        <div class="sidebar-profile">
+            <a href="/nbcorp-blog/#about">
+                    <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/0fedc968af6402c6ab176088bb995c91?s=110"/>
+            </a>
+            <span class="sidebar-profile-name">Titouan BENOIT</span>
+        </div>
+    
+    
+        <ul class="sidebar-buttons">
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/nbcorp-blog/ "
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+                    <span class="sidebar-button-desc">Accueil</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/nbcorp-blog/all-categories"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+                    <span class="sidebar-button-desc">Categories</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/nbcorp-blog/all-tags"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+                    <span class="sidebar-button-desc">Tags</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/nbcorp-blog/all-archives"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+                    <span class="sidebar-button-desc">Archive</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="#about"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+                    <span class="sidebar-button-desc">À propos</span>
+                </a>
+        </li>
+        
+    </ul>
+    
+        <ul class="sidebar-buttons">
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link " href="https://github.com/Nightbr" target="_blank">
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+                    <span class="sidebar-button-desc">GitHub</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link " href="http://stackoverflow.com/users/2183369/titouanb" target="_blank">
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-stack-overflow"></i>
+                    <span class="sidebar-button-desc">Stack Overflow</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link " href="https://twitter.com/titouan_benoit" target="_blank">
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-twitter"></i>
+                    <span class="sidebar-button-desc">Twitter</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link " href="https://www.linkedin.com/in/titouanbenoit" target="_blank">
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-linkedin"></i>
+                    <span class="sidebar-button-desc">LinkedIn</span>
+                </a>
+        </li>
+        
+    </ul>
+    
+        <ul class="sidebar-buttons">
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/nbcorp-blog/atom.xml"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+                    <span class="sidebar-button-desc">RSS</span>
+                </a>
+        </li>
+        
+    </ul>
+    
+</nav>
+
+            
+            <div id="main" data-behavior="3"
+                 class="
+                        hasCoverMetaIn
+                        ">
+                
+<article class="post" itemscope itemType="http://schema.org/BlogPosting">
+    
+    
+        <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title" itemprop="headline">
+            Développement d&#39;une application desktop maintenable en Python avec PyQt
+        </h1>
+    
+    <div class="post-meta">
+    <time itemprop="datePublished" datetime="2015-07-29T14:11:55+02:00">
+	
+		    29 juil. 2015
+    	
+    </time>
+    
+        <span>dans </span>
+        
+    <a class="category-link" href="/nbcorp-blog/categories/Developpement/">Développement</a>
+
+
+    
+</div>
+
+</div>
+    
+    <div class="post-content markdown" itemprop="articleBody">
+        <div class="main-content-wrap">
+            <p>Bonjour à tous,</p>
 <p>aujourd’hui je vais faire un petit tutoriel sur comment faire une application desktop en Python avec PyQt. Pour ceux qui ne connaissent pas <a href="http://www.qt.io/" target="_blank" rel="external">Qt</a>, c’est une librairie graphique qui fournit pas mal d’outils sympas pour faire des interfaces graphiques. Vraiment puissant et sympa à utiliser, je le conseille vivement pour des projets de toutes tailles qui ont besoin d’avoir un client desktop.</p>
 <a id="more"></a>
 <p>Une question légitime est “Pourquoi choisir de faire une application desktop en <a href="https://www.python.org/" target="_blank" rel="external">Python</a> ??”. En effet, c’est une bonne question. Dans un premier temps je dirais que le Python est multiplateforme et donc votre application fonctionnera sur Windows, Mac OS X et Linux ayant Python. De plus, personnellement je fais des applications desktop en Python principalement pour venir communiquer en Serial avec des systèmes embarqués (Communication Serial avec une Arduino, MBED ou un micro STM32). Ces applications me permettent d’avoir une interface graphique sympa pour venir configurer une Arduino par exemple. Le langage est vraiment facile à utiliser et performant, et couplé avec <a href="https://pip.pypa.io/en/stable/" target="_blank" rel="external">pip</a> le gestionnaire de dépendances on fait des projets vraiment propres en un temps record ;).</p>
@@ -114,7 +263,7 @@ aujourd’hui je vais faire un petit tutoriel sur comment faire une application 
 </ul>
 <p>Pour ma part, je travaille sous Linux Mint 17.10 et pour coder le super éditeur Sublime Text 3.</p>
 <h2 id="2-Qt-Designer"><a href="#2-Qt-Designer" class="headerlink" title="2. Qt Designer"></a>2. Qt Designer</h2><p>Qt Designer est l’outil qui vous permet de construire vos interfaces graphiques aussi appelé GUI (Graphical User Interface) ou simplement UI (User Interface).</p>
-<p><img src="/images/QtDesigner.png" alt="QtDesigner"></p>
+<p><img src="/nbcorp-blog/images/QtDesigner.png" alt="QtDesigner"></p>
 <p>A partir de cet outil, vous êtes capable de créer très facilement et rapidement vos interfaces graphique. Du simple drag&amp;drop et le tour est joué ! Ensuite, Qt designer enregistre l’UI au format .ui qui est simplement un format xml spécifique à Qt.</p>
 <p>Une fois notre interface réalisée, on peut à partir du fichier .ui réaliser une classe Python pour PyQt. On réalise ceci grâce à <strong>pyuic4</strong>.</p>
 <pre><code>pyuic4 monfichier.ui -o monfichier.py
@@ -135,7 +284,7 @@ aujourd’hui je vais faire un petit tutoriel sur comment faire une application 
 </ul>
 </li>
 </ul>
-<p><img src="/images/scaffolding.png" alt="scaffolding"></p>
+<p><img src="/nbcorp-blog/images/scaffolding.png" alt="scaffolding"></p>
 <p>Pour expliquer le principe, tous ce qui est lié à mon UI est dans le dossier<strong> UI</strong> (*.ui, mes classes Python générées à partir des *.ui, ressources tel que Images, …). Mon script <em>build.sh</em> me permet de convertir mon fichier <em>myui.ui</em> en <em>MyUI.py</em>.</p>
 <p><em>build.sh</em></p>
 <pre><code>#!/bin/bash
@@ -173,124 +322,244 @@ pyuic4 myui.ui -o MyUI.py
 <p>Voici les sources du projet présenté dans ce post : <a href="http://blog.nbcorp.fr/wp-content/uploads/2015/07/example-py.zip" target="_blank" rel="external">example-py</a></p>
 <p>Voili voilou ! Si vous avez des questions où des remarques, n’hésitez pas à les poster en commentaire !</p>
 
-      
+            
+        </div>
     </div>
-    <footer class="article-footer">
-      <a data-url="https://nightbr.github.io/nbcorp-blog/nbcorp-blog/2015/07/29/developpement-dune-application-desktop-maintenable-en-python-avec-pyqt/" data-id="ciwjsvbxr0000bcn82wqtq4ar" class="article-share-link">Partager</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/nbcorp-blog/tags/PyQt/">PyQt</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/nbcorp-blog/tags/Python/">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/nbcorp-blog/tags/QtDesigner/">QtDesigner</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/nbcorp-blog/tags/Scaffolding/">Scaffolding</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/nbcorp-blog/tags/application/">application</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/nbcorp-blog/tags/maintenable/">maintenable</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/nbcorp-blog/tags/py2exe/">py2exe</a></li></ul>
+    <div id="post-footer" class="post-footer main-content-wrap">
+        
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">TAGGÉ DANS</span><br/>
+                
+    <a class="tag tag--primary tag--small t-link" href="/nbcorp-blog/tags/PyQt/">PyQt</a> <a class="tag tag--primary tag--small t-link" href="/nbcorp-blog/tags/Python/">Python</a> <a class="tag tag--primary tag--small t-link" href="/nbcorp-blog/tags/QtDesigner/">QtDesigner</a> <a class="tag tag--primary tag--small t-link" href="/nbcorp-blog/tags/Scaffolding/">Scaffolding</a> <a class="tag tag--primary tag--small t-link" href="/nbcorp-blog/tags/application/">application</a> <a class="tag tag--primary tag--small t-link" href="/nbcorp-blog/tags/maintenable/">maintenable</a> <a class="tag tag--primary tag--small t-link" href="/nbcorp-blog/tags/py2exe/">py2exe</a>
 
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-  
-    <a href="/nbcorp-blog/2015/02/15/oha-open-home-automation/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Ancien</strong>
-      <div class="article-nav-title">OHA : Open Home Automation</div>
-    </a>
-  
-</nav>
+            </div>
+        
+        <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/nbcorp-blog/2016/12/13/Un-workflow-git-sympa-avec-gitflow/"  data-tooltip="Un workflow git sympa avec gitflow">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">PRÉCÉDENT</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/nbcorp-blog/2015/02/15/oha-open-home-automation/" data-tooltip="OHA : Open Home Automation">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">SUIVANT</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://nightbr.github.io/nbcorp-blog/2015/07/29/developpement-dune-application-desktop-maintenable-en-python-avec-pyqt/">
+                <i class="fa fa-google-plus"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://nightbr.github.io/nbcorp-blog/2015/07/29/developpement-dune-application-desktop-maintenable-en-python-avec-pyqt/">
+                <i class="fa fa-facebook-official"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://nightbr.github.io/nbcorp-blog/2015/07/29/developpement-dune-application-desktop-maintenable-en-python-avec-pyqt/">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#disqus_thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
 
-  
+
+        
+            
+                <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+            
+        
+    </div>
 </article>
 
-</section>
-        
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Catégories</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/nbcorp-blog/categories/Domotique/">Domotique</a></li><li class="category-list-item"><a class="category-list-link" href="/nbcorp-blog/categories/Developpement/">Développement</a></li></ul>
-    </div>
-  </div>
 
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Mot-clés</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/API/">API</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/Arduino/">Arduino</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/Automation/">Automation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/Connecte/">Connecté</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/Home/">Home</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/IoT/">IoT</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/OHA/">OHA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/Open/">Open</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/PRT5/">PRT5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/Projet/">Projet</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/PyQt/">PyQt</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/QtDesigner/">QtDesigner</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/RF433/">RF433</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/Scaffolding/">Scaffolding</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/application/">application</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/domotique/">domotique</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/maintenable/">maintenable</a></li><li class="tag-list-item"><a class="tag-list-link" href="/nbcorp-blog/tags/py2exe/">py2exe</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Nuage de mot-clés</h3>
-    <div class="widget tagcloud">
-      <a href="/nbcorp-blog/tags/API/" style="font-size: 10px;">API</a> <a href="/nbcorp-blog/tags/Arduino/" style="font-size: 10px;">Arduino</a> <a href="/nbcorp-blog/tags/Automation/" style="font-size: 10px;">Automation</a> <a href="/nbcorp-blog/tags/Connecte/" style="font-size: 10px;">Connecté</a> <a href="/nbcorp-blog/tags/Home/" style="font-size: 10px;">Home</a> <a href="/nbcorp-blog/tags/IoT/" style="font-size: 10px;">IoT</a> <a href="/nbcorp-blog/tags/OHA/" style="font-size: 10px;">OHA</a> <a href="/nbcorp-blog/tags/Open/" style="font-size: 10px;">Open</a> <a href="/nbcorp-blog/tags/PRT5/" style="font-size: 10px;">PRT5</a> <a href="/nbcorp-blog/tags/Projet/" style="font-size: 10px;">Projet</a> <a href="/nbcorp-blog/tags/PyQt/" style="font-size: 10px;">PyQt</a> <a href="/nbcorp-blog/tags/Python/" style="font-size: 20px;">Python</a> <a href="/nbcorp-blog/tags/QtDesigner/" style="font-size: 10px;">QtDesigner</a> <a href="/nbcorp-blog/tags/RF433/" style="font-size: 10px;">RF433</a> <a href="/nbcorp-blog/tags/Scaffolding/" style="font-size: 10px;">Scaffolding</a> <a href="/nbcorp-blog/tags/application/" style="font-size: 10px;">application</a> <a href="/nbcorp-blog/tags/domotique/" style="font-size: 10px;">domotique</a> <a href="/nbcorp-blog/tags/maintenable/" style="font-size: 10px;">maintenable</a> <a href="/nbcorp-blog/tags/py2exe/" style="font-size: 10px;">py2exe</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/nbcorp-blog/archives/2015/07/">juillet 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/nbcorp-blog/archives/2015/02/">février 2015</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/nbcorp-blog/2015/07/29/developpement-dune-application-desktop-maintenable-en-python-avec-pyqt/">Développement d&#39;une application desktop maintenable en Python avec PyQt</a>
-          </li>
-        
-          <li>
-            <a href="/nbcorp-blog/2015/02/15/oha-open-home-automation/">OHA : Open Home Automation</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2016 Titouan BENOIT<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2016 Titouan BENOIT. All Rights Reserved.
+    </span>
 </footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/nbcorp-blog/" class="mobile-nav-link">Home</a>
-  
-    <a href="/nbcorp-blog/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
+
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="3">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/nbcorp-blog/2016/12/13/Un-workflow-git-sympa-avec-gitflow/"  data-tooltip="Un workflow git sympa avec gitflow">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">PRÉCÉDENT</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/nbcorp-blog/2015/02/15/oha-open-home-automation/" data-tooltip="OHA : Open Home Automation">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">SUIVANT</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://nightbr.github.io/nbcorp-blog/2015/07/29/developpement-dune-application-desktop-maintenable-en-python-avec-pyqt/">
+                <i class="fa fa-google-plus"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://nightbr.github.io/nbcorp-blog/2015/07/29/developpement-dune-application-desktop-maintenable-en-python-avec-pyqt/">
+                <i class="fa fa-facebook-official"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://nightbr.github.io/nbcorp-blog/2015/07/29/developpement-dune-application-desktop-maintenable-en-python-avec-pyqt/">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#disqus_thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                <div id="share-options-bar" class="share-options-bar" data-behavior="3">
+    <ul class="share-options">
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https://nightbr.github.io/nbcorp-blog/2015/07/29/developpement-dune-application-desktop-maintenable-en-python-avec-pyqt/">
+                <i class="fa fa-google-plus"></i><span class="">Partager sur Google Plus</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://nightbr.github.io/nbcorp-blog/2015/07/29/developpement-dune-application-desktop-maintenable-en-python-avec-pyqt/">
+                <i class="fa fa-facebook-official"></i><span>Partager sur Facebook</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https://nightbr.github.io/nbcorp-blog/2015/07/29/developpement-dune-application-desktop-maintenable-en-python-avec-pyqt/">
+                <i class="fa fa-twitter"></i><span>Partager sur Twitter</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+            
+        </div>
+        
+
+
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-remove"></i>
+        </div>
+        
+            <img id="about-card-picture" src="https://www.gravatar.com/avatar/0fedc968af6402c6ab176088bb995c91?s=110"/>
+        
+            <h4 id="about-card-name">Titouan BENOIT</h4>
+        
+            <h5 id="about-card-bio"><p>Passionné des nouvelles technologies et du web depuis mon plus jeune âge, je souhaite développer des solutions innovantes pour améliorer le quotidien de tous.</p>
+</h5>
+        
+        
+            <h5 id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>CTO @ Welp.fr</p>
+
+            </h5>
+        
+        
+            <h5 id="about-card-location">
+                <i class="fa fa-map-marker"></i>
+                <br/>
+                France
+            </h5>
+        
+    </div>
+</div>
+
+        
+<div id="cover" style="background-image:url('/nbcorp-blog/assets/images/cover.jpg');"></div>
+    </body>
+    <!--SCRIPTS-->
+<script src="/nbcorp-blog/assets/js/script-sm8ygofpbwzoyv49k3emritcdqttdx2iftqewfcoc0phw6wk0sytwjtp3fjx.min.js"></script>
+<!--SCRIPTS END-->
+
+    
+        <script>
+             var disqus_config = function () {
+                 this.page.url = 'https://nightbr.github.io/nbcorp-blog/2015/07/29/developpement-dune-application-desktop-maintenable-en-python-avec-pyqt/';
+                 
+                    this.page.identifier = '2015/07/29/developpement-dune-application-desktop-maintenable-en-python-avec-pyqt/';
+                                  
+             };
+            (function() {
+                var d = document, s = d.createElement('script');
+                var disqus_shortname = 'nbcorp-blog';
+                s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+    
 
 
-  <link rel="stylesheet" href="/nbcorp-blog/fancybox/jquery.fancybox.css">
-  <script src="/nbcorp-blog/fancybox/jquery.fancybox.pack.js"></script>
 
-
-<script src="/nbcorp-blog/js/script.js"></script>
-
-  </div>
-</body>
 </html>

@@ -6,26 +6,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Nbcorp Blog">
-    <title>OHA : Open Home Automation - Nbcorp Blog</title>
+    <title>Un workflow git sympa avec gitflow - Nbcorp Blog</title>
     <meta name="author" content="Titouan BENOIT">
     
     
     
         <link rel="alternate" type="application/atom+xml" title="RSS" href="/nbcorp-blog/atom.xml">
     
-    <meta name="description" content="En dernière année d’école d’ingénieur, nous avions la possibilité de réaliser un projet technique sur le sujet de notre choix. Il se trouve que j’avais depuis longtemps envie de développer ma propre s">
+    <meta name="description" content="Hello,
+juste un petit post sur git flow que j’utilise dans les gros projets et quand on travaille à plusieurs.Le principe est simple, des branches et groupes de branches qui ont chacune un rôle spécif">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="OHA : Open Home Automation">
-<meta property="og:url" content="https://nightbr.github.io/2015/02/15/oha-open-home-automation/index.html">
+<meta property="og:title" content="Un workflow git sympa avec gitflow">
+<meta property="og:url" content="https://nightbr.github.io/2016/12/13/Un-workflow-git-sympa-avec-gitflow/index.html">
 <meta property="og:site_name" content="Nbcorp Blog">
-<meta property="og:description" content="En dernière année d’école d’ingénieur, nous avions la possibilité de réaliser un projet technique sur le sujet de notre choix. Il se trouve que j’avais depuis longtemps envie de développer ma propre s">
-<meta property="og:image" content="https://nightbr.github.io/nbcorp-blog/images/schema-principale.png">
-<meta property="og:image" content="https://nightbr.github.io/nbcorp-blog/images/oha-maquette-1.jpg">
-<meta property="og:updated_time" content="2016-12-14T10:51:44.968Z">
+<meta property="og:description" content="Hello,
+juste un petit post sur git flow que j’utilise dans les gros projets et quand on travaille à plusieurs.Le principe est simple, des branches et groupes de branches qui ont chacune un rôle spécif">
+<meta property="og:image" content="https://nightbr.github.io/git-flow.png">
+<meta property="og:updated_time" content="2016-12-14T10:51:44.970Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="OHA : Open Home Automation">
-<meta name="twitter:description" content="En dernière année d’école d’ingénieur, nous avions la possibilité de réaliser un projet technique sur le sujet de notre choix. Il se trouve que j’avais depuis longtemps envie de développer ma propre s">
-<meta name="twitter:image" content="https://nightbr.github.io/nbcorp-blog/images/schema-principale.png">
+<meta name="twitter:title" content="Un workflow git sympa avec gitflow">
+<meta name="twitter:description" content="Hello,
+juste un petit post sur git flow que j’utilise dans les gros projets et quand on travaille à plusieurs.Le principe est simple, des branches et groupes de branches qui ont chacune un rôle spécif">
+<meta name="twitter:image" content="https://nightbr.github.io/git-flow.png">
 <meta name="twitter:creator" content="@titouan_benoit">
     
     
@@ -34,6 +36,9 @@
     
         <meta property="og:image" content="https://www.gravatar.com/avatar/0fedc968af6402c6ab176088bb995c91?s=640"/>
     
+    
+        <meta property="og:image" content="https://nightbr.github.io/2016/12/13/Un-workflow-git-sympa-avec-gitflow/gitflow.jpg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="https://nightbr.github.io/2016/12/13/Un-workflow-git-sympa-avec-gitflow/gitflow.jpg" />
     
     
     
@@ -219,19 +224,19 @@
         <div class="post-header main-content-wrap text-left">
     
         <h1 class="post-title" itemprop="headline">
-            OHA : Open Home Automation
+            Un workflow git sympa avec gitflow
         </h1>
     
     <div class="post-meta">
-    <time itemprop="datePublished" datetime="2015-02-15T11:25:47+01:00">
+    <time itemprop="datePublished" datetime="2016-12-13T00:05:24+01:00">
 	
-		    15 févr. 2015
+		    13 déc. 2016
     	
     </time>
     
         <span>dans </span>
         
-    <a class="category-link" href="/nbcorp-blog/categories/Domotique/">Domotique</a>
+    <a class="category-link" href="/nbcorp-blog/categories/Developpement/">Développement</a>
 
 
     
@@ -241,33 +246,36 @@
     
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
-            <p>En dernière année d’école d’ingénieur, nous avions la possibilité de réaliser un projet technique sur le sujet de notre choix. Il se trouve que j’avais depuis longtemps envie de développer ma propre solution de domotique. En effet, je regardais souvent du côté de <a href="http://blog.encausse.net/s-a-r-a-h/" target="_blank" rel="external">S.A.R.A.H.</a> ou encore <a href="http://gladysproject.com/accueil" target="_blank" rel="external">Gladys</a>. Il en existe plein d’autre qui offre souvent la couche logicielle et qui sont Open Source mais je n’ai jamais vraiment trouvé de solution complète Open Hardware et Open Source.</p>
+            <p>Hello,</p>
+<p>juste un petit post sur <strong>git flow</strong> que j’utilise dans les gros projets et quand on travaille à plusieurs.<br>Le principe est simple, des branches et groupes de branches qui ont chacune un rôle spécifique.</p>
 <a id="more"></a>
-<p>Mais dans un premier temps, un petit rappel sur ce qu’est la domotique :</p>
-<p><em>La domotique est l’ensemble des techniques de l’électronique, de physique du bâtiment, d’automatisme, de l’informatique et des télécommunications utilisées dans les bâtiments, plus ou moins “interopérables” et permettant de centraliser le contrôle des différents systèmes et sous-systèmes de la maison et de l’entreprise (chauffage, volets roulants, porte de garage, portail d’entrée, prises électriques, etc.).</em></p>
-<p><strong>Mais qu’est ce que OHA :</strong></p>
-<p>Open Home Automation est un projet de domotique Open Source innovant qui permettra de contrôler les équipements de la maison, volets, lampes, chauffages par l’intermédiaire de son smartphone, tablette, PC, Laptop, etc. OHA propose une solution domotique qui ne nécessitera pas de changement important dans les installations de la maison, comme c’est le cas pour les solutions domotiques du marché. De plus chacun (particulier ou entreprise) pourra construire et ajouter son propre équipement connecté grâce à la Centrale Intelligente OHA qui détecte automatiquement les nouveaux équipements domotiques compatibles. OHA n’est pas qu’un simple système domotique propriétaire, c’est un univers d’objets connectés où chacun peut ajouter le sien.</p>
-<p>Pour OHA, nous voulions développer un système ouvert offrant une bonne base pour toutes les applications de domotique. Voici un schéma fonctionnel du système :</p>
-<p><img src="/nbcorp-blog/images/schema-principale.png" alt="schéma principale"></p>
-<p>Cette article présentera globalement le système mais je ferais sûrement d’autre article plus technique qui détaillera les différentes parties du système.</p>
-<p>Nous êtions une équipe de 4 personnes (2 personnes sur le logiciel API+client web et 2 personnes sur le reste : développement du daemon python + des modules Arduino). Ce projet a duré environ 6 mois (de Septembre 2014 à Janvier 2015) et nous nous étions fixé comme objectif d’avoir un serveur communicant avec un module simple de lampe connectée.</p>
-<p>Voici la maquette finale du système :</p>
-<p><img src="/nbcorp-blog/images/oha-maquette-1.jpg" alt="oha-maquette-1"></p>
-<p>Voici quelques vidéos (playlist Youtube) de démonstration qui montrent les fonctionnalités de base de système.</p>
-<iframe allowfullscreen frameborder="0" height="315" src="https://www.youtube.com/embed/videoseries?list=PLsTK3RYVBmuDBkJ-arTuKlfv2TFFZgNXX" width="560"></iframe>
-
-
-<p>Et sinon comme le système est Open Source, retrouvez tous nos documents sur Dropbox et le code sur notre serveur git :</p>
-<ul>
-<li>OHA Dropbox : <a href="https://www.dropbox.com/sh/elvth88n0mhhb0w/AADJKHIOZmS7qmZaeL1MDOVha?dl=0" target="_blank" rel="external">https://www.dropbox.com/sh/elvth88n0mhhb0w/AADJKHIOZmS7qmZaeL1MDOVha?dl=0</a></li>
-<li>git OHA Web client : <a href="http://git.nbcorp.fr/oha/oha-web-client" target="_blank" rel="external">http://git.nbcorp.fr/oha/oha-web-client</a></li>
-<li>git OHA API : <a href="http://git.nbcorp.fr/oha/oha-api" target="_blank" rel="external">http://git.nbcorp.fr/oha/oha-api</a></li>
-<li>git OHA Python Core : <a href="http://git.nbcorp.fr/oha/oha-python-core" target="_blank" rel="external">http://git.nbcorp.fr/oha/oha-python-core</a></li>
-<li><p>git OHA Module Core : <a href="http://git.nbcorp.fr/oha/oha-module-core" target="_blank" rel="external">http://git.nbcorp.fr/oha/oha-module-core</a></p>
-<p>Voilà, ça sera tout pour cette article d’introduction, je vais refaire d’autre article sur le sujet pour présenter l’architecture globale du système, les différents composants (API, Daemon, …).</p>
-</li>
+<h2 id="Description-des-Branches"><a href="#Description-des-Branches" class="headerlink" title="Description des Branches"></a>Description des Branches</h2><p>La branche <code>master</code> va correspondre à  notre environnement de <strong>prod</strong>.</p>
+<p>la branche <code>develop</code> va correspondre à la version en développement, tous les développeurs doivent commencer ici pour créer une nouvelle feature.</p>
+<p>Les branches <code>feature/*</code> correspondent à toutes les features. Chaque nouvelle feature est développé dans la branche <code>feature</code> puis finish dans la develop.</p>
+<p>Les branches <code>release/*</code> correspondent à toutes les releases. On utilise une branche release pour préparer et publier une nouvelle version.</p>
+<p>Les branches <code>hotfix/*</code> correspondent à tous les hotfixes. On utilise une branche hotfix pour créer rapidement un fix et l’appliquer directement sur la branche <code>master</code>.</p>
+<h2 id="Git-Flow"><a href="#Git-Flow" class="headerlink" title="Git Flow"></a>Git Flow</h2><ul>
+<li><a href="http://danielkummer.github.io/git-flow-cheatsheet/" target="_blank" rel="external">Git flow cheatsheet</a></li>
+<li><a href="http://nvie.com/posts/a-successful-git-branching-model/" target="_blank" rel="external">Git flow présentation</a></li>
+<li><a href="https://www.grafikart.fr/formations/git/git-flow" target="_blank" rel="external">Git flow tutoriel (FR)</a></li>
 </ul>
-<p>Si vous avez des questions, n’hésitez pas à les poser en commentaire ;)</p>
+<p><img src="git-flow.png" alt="git flow sketch"></p>
+<h2 id="Comment-utiliser-Git-Flow-dans-un-projet"><a href="#Comment-utiliser-Git-Flow-dans-un-projet" class="headerlink" title="Comment utiliser Git Flow dans un projet"></a>Comment utiliser Git Flow dans un projet</h2><ol>
+<li>Respecter et suivre le processus Git Flow</li>
+<li>Utiliser les commandes Git Flow :<ul>
+<li>★ Multi-platforme GUI: <a href="http://www.gitkraken.com/" target="_blank" rel="external">GitKraken</a></li>
+<li>OSX: <code>brew install git-flow</code></li>
+<li>Linux: <code>apt-get install git-flow</code></li>
+<li>Windows (cygwin): <code>wget -q -O - --no-check-certificate https://github.com/nvie/gitflow/raw/develop/contrib/gitflow-installer.sh | bash</code></li>
+<li>Windows GUI: <a href="https://www.sourcetreeapp.com/" target="_blank" rel="external">SourceTree</a></li>
+</ul>
+</li>
+<li>En général, on bloque la branche <code>Master</code> au développeurs et uniquement les lead-dev ou chef de projet peuvent créer une release.</li>
+</ol>
+<h2 id="GitKraken"><a href="#GitKraken" class="headerlink" title="GitKraken"></a>GitKraken</h2><p>La meilleure des solutions pour ne pas se prendre la tête avec Git c’est <a href="http://www.gitkraken.com/" target="_blank" rel="external">GitKraken</a></p>
+<p>Voici une cheatsheet qui peut être utile : <a href="https://www.gitkraken.com/resources/gitkraken-cheat-sheet" target="_blank" rel="external">GitKraken Cheat Sheet</a></p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Voilà, c’est assez sommaire mais il y a les infos principales pour bien utiliser Git Flow. Je pense que j’éditerai ce post ou en ferait un nouveau sur des cas pratiques rencontrés.</p>
+<p>A la prochaine !</p>
 
             
         </div>
@@ -277,7 +285,7 @@
             <div class="post-footer-tags">
                 <span class="text-color-light text-small">TAGGÉ DANS</span><br/>
                 
-    <a class="tag tag--primary tag--small t-link" href="/nbcorp-blog/tags/API/">API</a> <a class="tag tag--primary tag--small t-link" href="/nbcorp-blog/tags/Arduino/">Arduino</a> <a class="tag tag--primary tag--small t-link" href="/nbcorp-blog/tags/Automation/">Automation</a> <a class="tag tag--primary tag--small t-link" href="/nbcorp-blog/tags/Connecte/">Connecté</a> <a class="tag tag--primary tag--small t-link" href="/nbcorp-blog/tags/Home/">Home</a> <a class="tag tag--primary tag--small t-link" href="/nbcorp-blog/tags/IoT/">IoT</a> <a class="tag tag--primary tag--small t-link" href="/nbcorp-blog/tags/OHA/">OHA</a> <a class="tag tag--primary tag--small t-link" href="/nbcorp-blog/tags/OpenSource/">OpenSource</a> <a class="tag tag--primary tag--small t-link" href="/nbcorp-blog/tags/PRT5/">PRT5</a> <a class="tag tag--primary tag--small t-link" href="/nbcorp-blog/tags/Projet/">Projet</a> <a class="tag tag--primary tag--small t-link" href="/nbcorp-blog/tags/Python/">Python</a> <a class="tag tag--primary tag--small t-link" href="/nbcorp-blog/tags/RF433/">RF433</a> <a class="tag tag--primary tag--small t-link" href="/nbcorp-blog/tags/domotique/">domotique</a>
+    <a class="tag tag--primary tag--small t-link" href="/nbcorp-blog/tags/Git/">Git</a> <a class="tag tag--primary tag--small t-link" href="/nbcorp-blog/tags/devops/">devops</a> <a class="tag tag--primary tag--small t-link" href="/nbcorp-blog/tags/maintenable/">maintenable</a> <a class="tag tag--primary tag--small t-link" href="/nbcorp-blog/tags/workflow/">workflow</a>
 
             </div>
         
@@ -286,7 +294,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/nbcorp-blog/2015/07/29/developpement-dune-application-desktop-maintenable-en-python-avec-pyqt/"  data-tooltip="Développement d&#39;une application desktop maintenable en Python avec PyQt">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">PRÉCÉDENT</span>
@@ -294,7 +302,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--disabled">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/nbcorp-blog/2015/07/29/developpement-dune-application-desktop-maintenable-en-python-avec-pyqt/" data-tooltip="Développement d&#39;une application desktop maintenable en Python avec PyQt">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">SUIVANT</span>
                     <i class="fa fa-angle-right"></i>
@@ -309,17 +317,17 @@
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://nightbr.github.io/nbcorp-blog/2015/02/15/oha-open-home-automation/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://nightbr.github.io/nbcorp-blog/2016/12/13/Un-workflow-git-sympa-avec-gitflow/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://nightbr.github.io/nbcorp-blog/2015/02/15/oha-open-home-automation/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://nightbr.github.io/nbcorp-blog/2016/12/13/Un-workflow-git-sympa-avec-gitflow/">
                 <i class="fa fa-facebook-official"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://nightbr.github.io/nbcorp-blog/2015/02/15/oha-open-home-automation/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://nightbr.github.io/nbcorp-blog/2016/12/13/Un-workflow-git-sympa-avec-gitflow/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
@@ -367,7 +375,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/nbcorp-blog/2015/07/29/developpement-dune-application-desktop-maintenable-en-python-avec-pyqt/"  data-tooltip="Développement d&#39;une application desktop maintenable en Python avec PyQt">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">PRÉCÉDENT</span>
@@ -375,7 +383,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--disabled">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/nbcorp-blog/2015/07/29/developpement-dune-application-desktop-maintenable-en-python-avec-pyqt/" data-tooltip="Développement d&#39;une application desktop maintenable en Python avec PyQt">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">SUIVANT</span>
                     <i class="fa fa-angle-right"></i>
@@ -390,17 +398,17 @@
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://nightbr.github.io/nbcorp-blog/2015/02/15/oha-open-home-automation/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://nightbr.github.io/nbcorp-blog/2016/12/13/Un-workflow-git-sympa-avec-gitflow/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://nightbr.github.io/nbcorp-blog/2015/02/15/oha-open-home-automation/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://nightbr.github.io/nbcorp-blog/2016/12/13/Un-workflow-git-sympa-avec-gitflow/">
                 <i class="fa fa-facebook-official"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://nightbr.github.io/nbcorp-blog/2015/02/15/oha-open-home-automation/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://nightbr.github.io/nbcorp-blog/2016/12/13/Un-workflow-git-sympa-avec-gitflow/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
@@ -426,17 +434,17 @@
                 <div id="share-options-bar" class="share-options-bar" data-behavior="3">
     <ul class="share-options">
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https://nightbr.github.io/nbcorp-blog/2015/02/15/oha-open-home-automation/">
+            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https://nightbr.github.io/nbcorp-blog/2016/12/13/Un-workflow-git-sympa-avec-gitflow/">
                 <i class="fa fa-google-plus"></i><span class="">Partager sur Google Plus</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://nightbr.github.io/nbcorp-blog/2015/02/15/oha-open-home-automation/">
+            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://nightbr.github.io/nbcorp-blog/2016/12/13/Un-workflow-git-sympa-avec-gitflow/">
                 <i class="fa fa-facebook-official"></i><span>Partager sur Facebook</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https://nightbr.github.io/nbcorp-blog/2015/02/15/oha-open-home-automation/">
+            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https://nightbr.github.io/nbcorp-blog/2016/12/13/Un-workflow-git-sympa-avec-gitflow/">
                 <i class="fa fa-twitter"></i><span>Partager sur Twitter</span>
             </a>
         </li>
@@ -491,9 +499,9 @@
     
         <script>
              var disqus_config = function () {
-                 this.page.url = 'https://nightbr.github.io/nbcorp-blog/2015/02/15/oha-open-home-automation/';
+                 this.page.url = 'https://nightbr.github.io/nbcorp-blog/2016/12/13/Un-workflow-git-sympa-avec-gitflow/';
                  
-                    this.page.identifier = '2015/02/15/oha-open-home-automation/';
+                    this.page.identifier = '2016/12/13/Un-workflow-git-sympa-avec-gitflow/';
                                   
              };
             (function() {
