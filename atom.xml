@@ -172,13 +172,13 @@ pyuic4 myui.ui -o MyUI.py
     
       <category term="maintenable" scheme="https://nightbr.github.io/tags/maintenable/"/>
     
-      <category term="Python" scheme="https://nightbr.github.io/tags/Python/"/>
-    
       <category term="application" scheme="https://nightbr.github.io/tags/application/"/>
     
       <category term="py2exe" scheme="https://nightbr.github.io/tags/py2exe/"/>
     
       <category term="PyQt" scheme="https://nightbr.github.io/tags/PyQt/"/>
+    
+      <category term="Python" scheme="https://nightbr.github.io/tags/Python/"/>
     
       <category term="QtDesigner" scheme="https://nightbr.github.io/tags/QtDesigner/"/>
     
@@ -231,6 +231,8 @@ pyuic4 myui.ui -o MyUI.py
       <category term="Domotique" scheme="https://nightbr.github.io/categories/Domotique/"/>
     
     
+      <category term="Python" scheme="https://nightbr.github.io/tags/Python/"/>
+    
       <category term="API" scheme="https://nightbr.github.io/tags/API/"/>
     
       <category term="Arduino" scheme="https://nightbr.github.io/tags/Arduino/"/>
@@ -252,8 +254,6 @@ pyuic4 myui.ui -o MyUI.py
       <category term="Projet" scheme="https://nightbr.github.io/tags/Projet/"/>
     
       <category term="PRT5" scheme="https://nightbr.github.io/tags/PRT5/"/>
-    
-      <category term="Python" scheme="https://nightbr.github.io/tags/Python/"/>
     
       <category term="RF433" scheme="https://nightbr.github.io/tags/RF433/"/>
     
