@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Nbcorp Blog</title>
+  
+  <link href="/nbcorp-blog/atom.xml" rel="self"/>
+  
+  <link href="https://nightbr.github.io/"/>
+  <updated>2016-12-14T10:51:44.970Z</updated>
+  <id>https://nightbr.github.io/</id>
+  
+  <author>
+    <name>Titouan BENOIT</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Un workflow git sympa avec gitflow</title>
+    <link href="https://nightbr.github.io/2016/12/13/Un-workflow-git-sympa-avec-gitflow/"/>
+    <id>https://nightbr.github.io/2016/12/13/Un-workflow-git-sympa-avec-gitflow/</id>
+    <published>2016-12-12T23:05:24.000Z</published>
+    <updated>2016-12-14T10:51:44.970Z</updated>
+    
+    <content type="html"><![CDATA[<p>Hello,</p>
+<p>juste un petit post sur <strong>git flow</strong> que j’utilise dans les gros projets et quand on travaille à plusieurs.<br>Le principe est simple, des branches et groupes de branches qui ont chacune un rôle spécifique.</p>
+<a id="more"></a>
+<h2 id="Description-des-Branches"><a href="#Description-des-Branches" class="headerlink" title="Description des Branches"></a>Description des Branches</h2><p>La branche <code>master</code> va correspondre à  notre environnement de <strong>prod</strong>.</p>
+<p>la branche <code>develop</code> va correspondre à la version en développement, tous les développeurs doivent commencer ici pour créer une nouvelle feature.</p>
+<p>Les branches <code>feature/*</code> correspondent à toutes les features. Chaque nouvelle feature est développé dans la branche <code>feature</code> puis finish dans la develop.</p>
+<p>Les branches <code>release/*</code> correspondent à toutes les releases. On utilise une branche release pour préparer et publier une nouvelle version.</p>
+<p>Les branches <code>hotfix/*</code> correspondent à tous les hotfixes. On utilise une branche hotfix pour créer rapidement un fix et l’appliquer directement sur la branche <code>master</code>.</p>
+<h2 id="Git-Flow"><a href="#Git-Flow" class="headerlink" title="Git Flow"></a>Git Flow</h2><ul>
+<li><a href="http://danielkummer.github.io/git-flow-cheatsheet/" target="_blank" rel="external">Git flow cheatsheet</a></li>
+<li><a href="http://nvie.com/posts/a-successful-git-branching-model/" target="_blank" rel="external">Git flow présentation</a></li>
+<li><a href="https://www.grafikart.fr/formations/git/git-flow" target="_blank" rel="external">Git flow tutoriel (FR)</a></li>
+</ul>
+<p><img src="git-flow.png" alt="git flow sketch"></p>
+<h2 id="Comment-utiliser-Git-Flow-dans-un-projet"><a href="#Comment-utiliser-Git-Flow-dans-un-projet" class="headerlink" title="Comment utiliser Git Flow dans un projet"></a>Comment utiliser Git Flow dans un projet</h2><ol>
+<li>Respecter et suivre le processus Git Flow</li>
+<li>Utiliser les commandes Git Flow :<ul>
+<li>★ Multi-platforme GUI: <a href="http://www.gitkraken.com/" target="_blank" rel="external">GitKraken</a></li>
+<li>OSX: <code>brew install git-flow</code></li>
+<li>Linux: <code>apt-get install git-flow</code></li>
+<li>Windows (cygwin): <code>wget -q -O - --no-check-certificate https://github.com/nvie/gitflow/raw/develop/contrib/gitflow-installer.sh | bash</code></li>
+<li>Windows GUI: <a href="https://www.sourcetreeapp.com/" target="_blank" rel="external">SourceTree</a></li>
+</ul>
+</li>
+<li>En général, on bloque la branche <code>Master</code> au développeurs et uniquement les lead-dev ou chef de projet peuvent créer une release.</li>
+</ol>
+<h2 id="GitKraken"><a href="#GitKraken" class="headerlink" title="GitKraken"></a>GitKraken</h2><p>La meilleure des solutions pour ne pas se prendre la tête avec Git c’est <a href="http://www.gitkraken.com/" target="_blank" rel="external">GitKraken</a></p>
+<p>Voici une cheatsheet qui peut être utile : <a href="https://www.gitkraken.com/resources/gitkraken-cheat-sheet" target="_blank" rel="external">GitKraken Cheat Sheet</a></p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Voilà, c’est assez sommaire mais il y a les infos principales pour bien utiliser Git Flow. Je pense que j’éditerai ce post ou en ferait un nouveau sur des cas pratiques rencontrés.</p>
+<p>A la prochaine !</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Hello,&lt;/p&gt;
+&lt;p&gt;juste un petit post sur &lt;strong&gt;git flow&lt;/strong&gt; que j’utilise dans les gros projets et quand on travaille à plusieurs.&lt;br&gt;Le principe est simple, des branches et groupes de branches qui ont chacune un rôle spécifique.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Développement" scheme="https://nightbr.github.io/categories/Developpement/"/>
+    
+    
+      <category term="Git" scheme="https://nightbr.github.io/tags/Git/"/>
+    
+      <category term="workflow" scheme="https://nightbr.github.io/tags/workflow/"/>
+    
+      <category term="maintenable" scheme="https://nightbr.github.io/tags/maintenable/"/>
+    
+      <category term="devops" scheme="https://nightbr.github.io/tags/devops/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Développement d&#39;une application desktop maintenable en Python avec PyQt</title>
+    <link href="https://nightbr.github.io/2015/07/29/developpement-dune-application-desktop-maintenable-en-python-avec-pyqt/"/>
+    <id>https://nightbr.github.io/2015/07/29/developpement-dune-application-desktop-maintenable-en-python-avec-pyqt/</id>
+    <published>2015-07-29T12:11:55.000Z</published>
+    <updated>2016-12-14T10:51:44.966Z</updated>
+    
+    <content type="html"><![CDATA[<p>Bonjour à tous,</p>
+<p>aujourd’hui je vais faire un petit tutoriel sur comment faire une application desktop en Python avec PyQt. Pour ceux qui ne connaissent pas <a href="http://www.qt.io/" target="_blank" rel="external">Qt</a>, c’est une librairie graphique qui fournit pas mal d’outils sympas pour faire des interfaces graphiques. Vraiment puissant et sympa à utiliser, je le conseille vivement pour des projets de toutes tailles qui ont besoin d’avoir un client desktop.</p>
+<a id="more"></a>
+<p>Une question légitime est “Pourquoi choisir de faire une application desktop en <a href="https://www.python.org/" target="_blank" rel="external">Python</a> ??”. En effet, c’est une bonne question. Dans un premier temps je dirais que le Python est multiplateforme et donc votre application fonctionnera sur Windows, Mac OS X et Linux ayant Python. De plus, personnellement je fais des applications desktop en Python principalement pour venir communiquer en Serial avec des systèmes embarqués (Communication Serial avec une Arduino, MBED ou un micro STM32). Ces applications me permettent d’avoir une interface graphique sympa pour venir configurer une Arduino par exemple. Le langage est vraiment facile à utiliser et performant, et couplé avec <a href="https://pip.pypa.io/en/stable/" target="_blank" rel="external">pip</a> le gestionnaire de dépendances on fait des projets vraiment propres en un temps record ;).</p>
+<p>Maintenant que j’ai introduit le sujet, je vous propose de mettre en place une application très simple avec Python et PyQt ainsi qu’un environnement facile à maintenir.</p>
+<h2 id="1-Prerequis"><a href="#1-Prerequis" class="headerlink" title="1. Prérequis"></a>1. Prérequis</h2><p>Pour ceux qui développent sous Linux :</p>
+<ul>
+<li>Python 2.7.x</li>
+<li>PyQt4 : <code>sudo apt-get install pyqt4-dev</code></li>
+<li>PyQt4 Tools : <code>sudo apt-get install pyqt4-dev-tools</code></li>
+<li>Qt-designer : <code>sudo apt-get install qt4-designer</code></li>
+</ul>
+<p>Pour ceux sous Windows :</p>
+<ul>
+<li>Python 2.7.x</li>
+<li>PyQt4 : <a href="http://www.riverbankcomputing.co.uk/software/pyqt/download" target="_blank" rel="external">http://www.riverbankcomputing.co.uk/software/pyqt/download</a></li>
+</ul>
+<p>Pour ma part, je travaille sous Linux Mint 17.10 et pour coder le super éditeur Sublime Text 3.</p>
+<h2 id="2-Qt-Designer"><a href="#2-Qt-Designer" class="headerlink" title="2. Qt Designer"></a>2. Qt Designer</h2><p>Qt Designer est l’outil qui vous permet de construire vos interfaces graphiques aussi appelé GUI (Graphical User Interface) ou simplement UI (User Interface).</p>
+<p><img src="/nbcorp-blog/images/QtDesigner.png" alt="QtDesigner"></p>
+<p>A partir de cet outil, vous êtes capable de créer très facilement et rapidement vos interfaces graphique. Du simple drag&amp;drop et le tour est joué ! Ensuite, Qt designer enregistre l’UI au format .ui qui est simplement un format xml spécifique à Qt.</p>
+<p>Une fois notre interface réalisée, on peut à partir du fichier .ui réaliser une classe Python pour PyQt. On réalise ceci grâce à <strong>pyuic4</strong>.</p>
+<pre><code>pyuic4 monfichier.ui -o monfichier.py
+</code></pre><p>Et on récupère une classe Python qui correspond à notre UI et qu’on va pouvoir manipuler en Python. Il faut à présent faire un petit scaffolding pour notre projet afin de faciliter l’intégration de l’UI dans notre app.</p>
+<h2 id="3-Scaffolding"><a href="#3-Scaffolding" class="headerlink" title="3. Scaffolding"></a>3. Scaffolding</h2><p>Je propose un scaffolding comme ceci : (note : en <strong>gras</strong> les dossiers en <em>italique</em> les fichiers)</p>
+<ul>
+<li><strong>project</strong><ul>
+<li><em>appName.py</em></li>
+<li><em>App.py</em></li>
+<li><em>MainUI.py</em></li>
+<li><em><strong>init</strong>.py</em></li>
+<li><strong>UI</strong><ul>
+<li><strong>myui.ui</strong></li>
+<li><strong>MyUI.py</strong></li>
+<li><strong>build.sh</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="/nbcorp-blog/images/scaffolding.png" alt="scaffolding"></p>
+<p>Pour expliquer le principe, tous ce qui est lié à mon UI est dans le dossier<strong> UI</strong> (*.ui, mes classes Python générées à partir des *.ui, ressources tel que Images, …). Mon script <em>build.sh</em> me permet de convertir mon fichier <em>myui.ui</em> en <em>MyUI.py</em>.</p>
+<p><em>build.sh</em></p>
+<pre><code>#!/bin/bash
+
+pyuic4 myui.ui -o MyUI.py
+#pyrcc4 ressources.qrc -o Ressources_rc.py
+</code></pre><p>La magie s’opère ensuite dans le fichier MainUI.py ; en effet, je vais créer une classe MainUI qui va hériter de la classe MyUI du fichier MyUI.py</p>
+<p>Grâce à ce système, si je fais des modifications sur mon UI via Qt designer, je n’ai qu’à exécuter mon script build.sh pour mettre à jour mon UI.</p>
+<h2 id="4-Organisation-du-code"><a href="#4-Organisation-du-code" class="headerlink" title="4. Organisation du code"></a>4. Organisation du code</h2><p>Le fichier MainUI.py hérite de notre MyUI.py généré depuis le fichier de Qt Designer :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/python</span></div><div class="line"><span class="comment"># -*- coding: UTF-8 -*-</span></div><div class="line"><span class="comment">#***************************************************************************#</span></div><div class="line"><span class="comment">#                                                                           #</span></div><div class="line"><span class="comment">#                              MainUI.py                                    #</span></div><div class="line"><span class="comment">#                                                                           #</span></div><div class="line"><span class="comment">#***************************************************************************#</span></div><div class="line"><span class="comment">#                                                                           #</span></div><div class="line"><span class="comment"># Class MainUI extend from Ui_MainWindow which is generated with #</span></div><div class="line"><span class="comment"># py2uic and QtDesigner.                                                    #</span></div><div class="line"><span class="comment">#                                                                           #</span></div><div class="line"><span class="comment">#                                                                           #</span></div><div class="line"><span class="comment">#***************************************************************************#</span></div><div class="line"><span class="comment"># Création     : 29.07.2015  T. Benoit       Version 1.0                    #</span></div><div class="line"><span class="comment"># Vérifié      : @@.@@.@@@@  T. Benoit                                      #</span></div><div class="line"><span class="comment"># Modification :                                                            #</span></div><div class="line"><span class="comment">#***************************************************************************#</span></div><div class="line"></div><div class="line"><span class="keyword">import</span> sys</div><div class="line"><span class="keyword">import</span> UI.MyUI <span class="keyword">as</span> MyUI</div><div class="line"><span class="keyword">from</span> PyQt4 <span class="keyword">import</span> QtCore, QtGui</div><div class="line"></div><div class="line"><span class="keyword">try</span>:</div><div class="line">    _fromUtf8 = QtCore.QString.fromUtf8</div><div class="line"><span class="keyword">except</span> AttributeError:</div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">_fromUtf8</span><span class="params">(s)</span>:</span></div><div class="line">        <span class="keyword">return</span> s</div><div class="line"></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MainUI</span><span class="params">(QtGui.QMainWindow, MyUI.Ui_MainWindow)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, parent=None)</span>:</span></div><div class="line">        super(MainUI, self).__init__(parent)</div><div class="line">        self.setupUi(self)</div><div class="line"></div><div class="line">        <span class="comment"># customize UI here</span></div><div class="line"></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">(self)</span>:</span></div><div class="line">        self.show()</div></pre></td></tr></table></figure>
+<p>On peut ici personnaliser notre UI avec des comportements particuliers comme lier un bouton pour ouvrir une boite de dialogue, … On met ici des fonctionnalités liées à l’UI mais pas encore des fonctionnalités liées à l’application en elle même. Les fonctionnalités liées à l’application vont se trouver dans le fichier App.py !</p>
+<p><strong>App.py</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/python</span></div><div class="line"><span class="comment"># -*- coding: UTF-8 -*-</span></div><div class="line"><span class="comment">#***************************************************************************#</span></div><div class="line"><span class="comment">#                                                                           #</span></div><div class="line"><span class="comment">#                                 App.py                                    #</span></div><div class="line"><span class="comment">#                                                                           #</span></div><div class="line"><span class="comment">#***************************************************************************#</span></div><div class="line"><span class="comment">#                                                                           #</span></div><div class="line"><span class="comment"># Class App which contains application logic                                #</span></div><div class="line"><span class="comment">#                                                                           #</span></div><div class="line"><span class="comment">#                                                                           #</span></div><div class="line"><span class="comment">#                                                                           #</span></div><div class="line"><span class="comment">#***************************************************************************#</span></div><div class="line"><span class="comment"># Création     : 29.07.2015  T. Benoit       Version 1.0                    #</span></div><div class="line"><span class="comment"># Vérifié      : @@.@@.@@@@  T. Benoit                                      #</span></div><div class="line"><span class="comment"># Modification :                                                            #</span></div><div class="line"><span class="comment">#***************************************************************************#</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">from</span> MainUI <span class="keyword">import</span> MainUI</div><div class="line"><span class="keyword">from</span> PyQt4 <span class="keyword">import</span> QtCore, QtGui</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">#---------------------------------------------------------------------------#</span></div><div class="line"></div><div class="line"><span class="keyword">try</span>:</div><div class="line">    _fromUtf8 = QtCore.QString.fromUtf8</div><div class="line"><span class="keyword">except</span> AttributeError:</div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">_fromUtf8</span><span class="params">(s)</span>:</span></div><div class="line">        <span class="keyword">return</span> s</div><div class="line"></div><div class="line"><span class="comment">#---------------------------------------------------------------------------#</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span>:</span></div><div class="line"></div><div class="line">    gui = <span class="keyword">None</span></div><div class="line">    app = <span class="keyword">None</span></div><div class="line">    counter = <span class="number">0</span></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, guiClass, appClass)</span>:</span></div><div class="line">        self.gui = guiClass</div><div class="line">        self.app = appClass</div><div class="line">        self.counter = <span class="number">0</span></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">setup</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="string">""" setup functionnality """</span></div><div class="line"></div><div class="line">        self.gui.pushButton.clicked.connect(self.action)</div><div class="line"></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="string">""" Main execution for App """</span></div><div class="line">        self.setup()</div><div class="line">        self.gui.main()</div><div class="line"></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">action</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="string">""" action when I click the push Button """</span></div><div class="line">        self.gui.textEdit.append(<span class="string">"Hello world: "</span>+str(self.counter))</div><div class="line">        self.counter = self.counter + <span class="number">1</span></div></pre></td></tr></table></figure>
+<p>On retrouve ici la base de notre application, on injecte la classe avec l’ui afin de pouvoir manipuler les objets de l’interface graphique. La méthode setup permet d’initialiser les connect qui sont des listeners d’événement pour PyQt. On y attache des fonctions callbacks qui seront exécutés si l’événement survient. Par exemple ici j’ai attaché l’événement clicked sur le bouton pushButton à la méthode action de la classe. Dans cette méthode, je remplis le textEdit avec hello world et un compteur.</p>
+<p>La class App est le coeur de votre application, c’est là où vous mettez la logique de votre app.</p>
+<p>Enfin, il faut le fichier de l’application qui sera à exécuter :</p>
+<p><em>appName.py</em></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/python</span></div><div class="line"><span class="comment"># -*- coding: UTF-8 -*-</span></div><div class="line"><span class="comment">#***************************************************************************#</span></div><div class="line"><span class="comment">#                                                                           #</span></div><div class="line"><span class="comment">#                              appName.py                                   #</span></div><div class="line"><span class="comment">#                                                                           #</span></div><div class="line"><span class="comment">#***************************************************************************#</span></div><div class="line"><span class="comment">#                                                                           #</span></div><div class="line"><span class="comment"># Main file for our Application                                             #</span></div><div class="line"><span class="comment">#                                                                           #</span></div><div class="line"><span class="comment">#                                                                           #</span></div><div class="line"><span class="comment">#                                                                           #</span></div><div class="line"><span class="comment">#***************************************************************************#</span></div><div class="line"><span class="comment"># Création     : 29.07.2015  T. Benoit       Version 1.0                    #</span></div><div class="line"><span class="comment"># Vérifié      : @@.@@.@@@@  T. Benoit                                      #</span></div><div class="line"><span class="comment"># Modification :                                                            #</span></div><div class="line"><span class="comment">#***************************************************************************#</span></div><div class="line"></div><div class="line"><span class="keyword">import</span> sys</div><div class="line"><span class="keyword">from</span> MainUI <span class="keyword">import</span> MainUI</div><div class="line"><span class="keyword">from</span> App <span class="keyword">import</span> App</div><div class="line"><span class="keyword">from</span> PyQt4 <span class="keyword">import</span> QtCore, QtGui</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></div><div class="line">    app = QtGui.QApplication(sys.argv) <span class="comment">#create a Qt app</span></div><div class="line">    gui = MainUI() <span class="comment"># create GUI instance</span></div><div class="line">    myApp = App(gui,app)</div><div class="line">    myApp.main() <span class="comment"># init the App</span></div><div class="line">    sys.exit(app.exec_()) <span class="comment"># lauch Qt App</span></div><div class="line"></div><div class="line"><span class="comment">#---------------------------------------------------------------------------#</span></div><div class="line"><span class="comment">#                                Main                                       #</span></div><div class="line"><span class="comment">#---------------------------------------------------------------------------#</span></div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__==<span class="string">'__main__'</span>:</div><div class="line">    main()</div></pre></td></tr></table></figure>
+<p>Dans un premier temps, on créé une Qt app puis on instancie notre GUI qui vient du MainUI et enfin on instancie notre classe App en lui injectant le gui et l’app Qt pour qu’elle puisse les manipuler. Le must serait d’instancier la classe MainUI dans un thread et l’App dans un autre thread car si vous avez des fonctions dans la classe App qui prennent du temps ou qui sont bloquantes, cela va freezer l’interface graphique… pas cool… Mais dans la majorité des cas, on clique sur un bouton et on fait une action simple non bloquante dans ce cas là pas besoin de séparer l’App et l’UI dans deux threads différents.</p>
+<p>Et voilà, vous n’avez plus qu’à exécuter votre application : python appName.py</p>
+<h2 id="5-Pour-aller-plus-loin…"><a href="#5-Pour-aller-plus-loin…" class="headerlink" title="5. Pour aller plus loin…"></a>5. Pour aller plus loin…</h2><p>Maintenant qu’on a notre application, on voudrait bien en faire un .exe sous Windows afin de livrer une app packagée. Pour cela, il existe l’utilitaire <a href="http://www.py2exe.org/" target="_blank" rel="external">py2exe</a> qui est franchement bien !</p>
+<p>Il faut juste créer un fichier setup.py à la racine de notre projet avec la configuration de notre application :</p>
+<p><em>setup.py</em></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> distutils.core <span class="keyword">import</span> setup</div><div class="line"><span class="keyword">import</span> sys</div><div class="line"><span class="keyword">import</span> py2exe</div><div class="line"></div><div class="line">setup(name=<span class="string">"appName"</span>,</div><div class="line">      version=<span class="string">"1.0.0"</span>,</div><div class="line">      author=<span class="string">"Titouan Benoit"</span>,</div><div class="line">      author_email=<span class="string">"titouan.benoit@gmx.fr"</span>,</div><div class="line">      windows=[&#123;<span class="string">"script"</span>: <span class="string">"appName.py"</span>&#125;],</div><div class="line">      options=&#123;<span class="string">"py2exe"</span>: &#123;<span class="string">'bundle_files'</span>: <span class="number">1</span>, <span class="string">'compressed'</span>: <span class="keyword">True</span>,<span class="string">"includes"</span>: [<span class="string">"sip"</span>], <span class="string">"dll_excludes"</span>: [<span class="string">"MSVCP90.dll"</span>, <span class="string">"HID.DLL"</span>, <span class="string">"w9xpopen.exe"</span>]&#125;&#125;)</div></pre></td></tr></table></figure>
+<p>Et ensuite exécuter :</p>
+<pre><code>python setup.py py2exe
+</code></pre><p>Attention, cela fonctionne uniquement sous Windows bien entendu et il vous faut Microsoft Visual C++ 2008 : <a href="http://www.microsoft.com/fr-FR/download/details.aspx?id=29" target="_blank" rel="external">http://www.microsoft.com/fr-FR/download/details.aspx?id=29</a></p>
+<p>Vous avez ensuite un appName.exe et un library.zip que vous pouvez distribuer !</p>
+<h2 id="6-References-et-code-source"><a href="#6-References-et-code-source" class="headerlink" title="6. Références et code source"></a>6. Références et code source</h2><p>Voici les deux endroits où vous pourrez trouver des informations pour PyQt :</p>
+<ul>
+<li><a href="http://pyqt.sourceforge.net/Docs/PyQt4/index.html" target="_blank" rel="external">http://pyqt.sourceforge.net/Docs/PyQt4/index.html</a></li>
+<li><a href="http://pyqt.sourceforge.net/Docs/PyQt4/classes.html" target="_blank" rel="external">http://pyqt.sourceforge.net/Docs/PyQt4/classes.html</a></li>
+</ul>
+<p>Après n’hésitez pas à chercher sur Google ;)</p>
+<p>Voici les sources du projet présenté dans ce post : <a href="http://blog.nbcorp.fr/wp-content/uploads/2015/07/example-py.zip" target="_blank" rel="external">example-py</a></p>
+<p>Voili voilou ! Si vous avez des questions où des remarques, n’hésitez pas à les poster en commentaire !</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Bonjour à tous,&lt;/p&gt;
+&lt;p&gt;aujourd’hui je vais faire un petit tutoriel sur comment faire une application desktop en Python avec PyQt. Pour ceux qui ne connaissent pas &lt;a href=&quot;http://www.qt.io/&quot;&gt;Qt&lt;/a&gt;, c’est une librairie graphique qui fournit pas mal d’outils sympas pour faire des interfaces graphiques. Vraiment puissant et sympa à utiliser, je le conseille vivement pour des projets de toutes tailles qui ont besoin d’avoir un client desktop.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Développement" scheme="https://nightbr.github.io/categories/Developpement/"/>
+    
+    
+      <category term="maintenable" scheme="https://nightbr.github.io/tags/maintenable/"/>
+    
+      <category term="Python" scheme="https://nightbr.github.io/tags/Python/"/>
+    
+      <category term="application" scheme="https://nightbr.github.io/tags/application/"/>
+    
+      <category term="py2exe" scheme="https://nightbr.github.io/tags/py2exe/"/>
+    
+      <category term="PyQt" scheme="https://nightbr.github.io/tags/PyQt/"/>
+    
+      <category term="QtDesigner" scheme="https://nightbr.github.io/tags/QtDesigner/"/>
+    
+      <category term="Scaffolding" scheme="https://nightbr.github.io/tags/Scaffolding/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>OHA : Open Home Automation</title>
+    <link href="https://nightbr.github.io/2015/02/15/oha-open-home-automation/"/>
+    <id>https://nightbr.github.io/2015/02/15/oha-open-home-automation/</id>
+    <published>2015-02-15T10:25:47.000Z</published>
+    <updated>2016-12-14T10:51:44.968Z</updated>
+    
+    <content type="html"><![CDATA[<p>En dernière année d’école d’ingénieur, nous avions la possibilité de réaliser un projet technique sur le sujet de notre choix. Il se trouve que j’avais depuis longtemps envie de développer ma propre solution de domotique. En effet, je regardais souvent du côté de <a href="http://blog.encausse.net/s-a-r-a-h/" target="_blank" rel="external">S.A.R.A.H.</a> ou encore <a href="http://gladysproject.com/accueil" target="_blank" rel="external">Gladys</a>. Il en existe plein d’autre qui offre souvent la couche logicielle et qui sont Open Source mais je n’ai jamais vraiment trouvé de solution complète Open Hardware et Open Source.</p>
+<a id="more"></a>
+<p>Mais dans un premier temps, un petit rappel sur ce qu’est la domotique :</p>
+<p><em>La domotique est l’ensemble des techniques de l’électronique, de physique du bâtiment, d’automatisme, de l’informatique et des télécommunications utilisées dans les bâtiments, plus ou moins “interopérables” et permettant de centraliser le contrôle des différents systèmes et sous-systèmes de la maison et de l’entreprise (chauffage, volets roulants, porte de garage, portail d’entrée, prises électriques, etc.).</em></p>
+<p><strong>Mais qu’est ce que OHA :</strong></p>
+<p>Open Home Automation est un projet de domotique Open Source innovant qui permettra de contrôler les équipements de la maison, volets, lampes, chauffages par l’intermédiaire de son smartphone, tablette, PC, Laptop, etc. OHA propose une solution domotique qui ne nécessitera pas de changement important dans les installations de la maison, comme c’est le cas pour les solutions domotiques du marché. De plus chacun (particulier ou entreprise) pourra construire et ajouter son propre équipement connecté grâce à la Centrale Intelligente OHA qui détecte automatiquement les nouveaux équipements domotiques compatibles. OHA n’est pas qu’un simple système domotique propriétaire, c’est un univers d’objets connectés où chacun peut ajouter le sien.</p>
+<p>Pour OHA, nous voulions développer un système ouvert offrant une bonne base pour toutes les applications de domotique. Voici un schéma fonctionnel du système :</p>
+<p><img src="/nbcorp-blog/images/schema-principale.png" alt="schéma principale"></p>
+<p>Cette article présentera globalement le système mais je ferais sûrement d’autre article plus technique qui détaillera les différentes parties du système.</p>
+<p>Nous êtions une équipe de 4 personnes (2 personnes sur le logiciel API+client web et 2 personnes sur le reste : développement du daemon python + des modules Arduino). Ce projet a duré environ 6 mois (de Septembre 2014 à Janvier 2015) et nous nous étions fixé comme objectif d’avoir un serveur communicant avec un module simple de lampe connectée.</p>
+<p>Voici la maquette finale du système :</p>
+<p><img src="/nbcorp-blog/images/oha-maquette-1.jpg" alt="oha-maquette-1"></p>
+<p>Voici quelques vidéos (playlist Youtube) de démonstration qui montrent les fonctionnalités de base de système.</p>
+<iframe allowfullscreen frameborder="0" height="315" src="https://www.youtube.com/embed/videoseries?list=PLsTK3RYVBmuDBkJ-arTuKlfv2TFFZgNXX" width="560"></iframe>
+
+
+<p>Et sinon comme le système est Open Source, retrouvez tous nos documents sur Dropbox et le code sur notre serveur git :</p>
+<ul>
+<li>OHA Dropbox : <a href="https://www.dropbox.com/sh/elvth88n0mhhb0w/AADJKHIOZmS7qmZaeL1MDOVha?dl=0" target="_blank" rel="external">https://www.dropbox.com/sh/elvth88n0mhhb0w/AADJKHIOZmS7qmZaeL1MDOVha?dl=0</a></li>
+<li>git OHA Web client : <a href="http://git.nbcorp.fr/oha/oha-web-client" target="_blank" rel="external">http://git.nbcorp.fr/oha/oha-web-client</a></li>
+<li>git OHA API : <a href="http://git.nbcorp.fr/oha/oha-api" target="_blank" rel="external">http://git.nbcorp.fr/oha/oha-api</a></li>
+<li>git OHA Python Core : <a href="http://git.nbcorp.fr/oha/oha-python-core" target="_blank" rel="external">http://git.nbcorp.fr/oha/oha-python-core</a></li>
+<li><p>git OHA Module Core : <a href="http://git.nbcorp.fr/oha/oha-module-core" target="_blank" rel="external">http://git.nbcorp.fr/oha/oha-module-core</a></p>
+<p>Voilà, ça sera tout pour cette article d’introduction, je vais refaire d’autre article sur le sujet pour présenter l’architecture globale du système, les différents composants (API, Daemon, …).</p>
+</li>
+</ul>
+<p>Si vous avez des questions, n’hésitez pas à les poser en commentaire ;)</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;En dernière année d’école d’ingénieur, nous avions la possibilité de réaliser un projet technique sur le sujet de notre choix. Il se trouve que j’avais depuis longtemps envie de développer ma propre solution de domotique. En effet, je regardais souvent du côté de &lt;a href=&quot;http://blog.encausse.net/s-a-r-a-h/&quot;&gt;S.A.R.A.H.&lt;/a&gt; ou encore &lt;a href=&quot;http://gladysproject.com/accueil&quot;&gt;Gladys&lt;/a&gt;. Il en existe plein d’autre qui offre souvent la couche logicielle et qui sont Open Source mais je n’ai jamais vraiment trouvé de solution complète Open Hardware et Open Source.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Domotique" scheme="https://nightbr.github.io/categories/Domotique/"/>
+    
+    
+      <category term="API" scheme="https://nightbr.github.io/tags/API/"/>
+    
+      <category term="Arduino" scheme="https://nightbr.github.io/tags/Arduino/"/>
+    
+      <category term="Automation" scheme="https://nightbr.github.io/tags/Automation/"/>
+    
+      <category term="Connecté" scheme="https://nightbr.github.io/tags/Connecte/"/>
+    
+      <category term="domotique" scheme="https://nightbr.github.io/tags/domotique/"/>
+    
+      <category term="Home" scheme="https://nightbr.github.io/tags/Home/"/>
+    
+      <category term="IoT" scheme="https://nightbr.github.io/tags/IoT/"/>
+    
+      <category term="OHA" scheme="https://nightbr.github.io/tags/OHA/"/>
+    
+      <category term="OpenSource" scheme="https://nightbr.github.io/tags/OpenSource/"/>
+    
+      <category term="Projet" scheme="https://nightbr.github.io/tags/Projet/"/>
+    
+      <category term="PRT5" scheme="https://nightbr.github.io/tags/PRT5/"/>
+    
+      <category term="Python" scheme="https://nightbr.github.io/tags/Python/"/>
+    
+      <category term="RF433" scheme="https://nightbr.github.io/tags/RF433/"/>
+    
+  </entry>
+  
+</feed>
