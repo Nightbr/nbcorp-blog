@@ -1,6 +1,6 @@
 # Nbcorp-blog
 
-<http://blog.nbcorp.fr>
+<https://blog.nbcorp.fr>
 
 Prowered by [Hexo](https://hexo.io/)
 
@@ -17,6 +17,10 @@ Plugins:
 
 ![workflow](source/images/hexo-workflow.png)
 
+1. Create a draft: `hexo new draft "My post title"`
+2. Start server with draft: `hexo serve --draft`
+3. Publish the draft: `hexo publish post "My post title"`
+
 ## ToDo
 
 - [x] code hightlights theme
@@ -24,4 +28,4 @@ Plugins:
 - [x] writting workflow
 - [x] moar doc here
 - [x] begin to write!
-- [ ] https... [cloudflare tutoriel](https://sheharyar.me/blog/free-ssl-for-github-pages-with-custom-domains/)
+- [ ] https... no wildcard with free cloudflare... need to find another workaround
