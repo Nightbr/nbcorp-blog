@@ -39,10 +39,10 @@ post_asset_folder: true
 relative_link: false
 future: true
 highlight:
-  enable: true
-  line_number: true
-  auto_detect: false
-  tab_replace: true
+    enable: true
+    line_number: true
+    auto_detect: false
+    tab_replace: true
 
 # Category & Tag
 default_category: uncategorized
@@ -69,12 +69,12 @@ theme: tranquilpeak
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: git
-  repo: git@github.com:Nightbr/nbcorp-blog.git
-  branch: gh-pages
+    type: git
+    repo: git@github.com:Nightbr/nbcorp-blog.git
+    branch: gh-pages
 
 # RSS Feeds
 feed:
-  type: atom
-  path: atom.xml
-  limit: 20
+    type: atom
+    path: atom.xml
+    limit: 20

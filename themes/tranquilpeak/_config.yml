@@ -13,6 +13,7 @@
 # use grunt task `build` to synchronize assets
 
 
+
 # Image directory (default: images)
 image_dir: assets/images
 
@@ -59,17 +60,17 @@ sidebar:
             icon: question
     author_links:
         github:
-             url: https://github.com/Nightbr
-             icon: github
-             title: global.github
+            url: https://github.com/Nightbr
+            icon: github
+            title: global.github
         stack_overflow:
-             url: http://stackoverflow.com/users/2183369/titouanb
-             icon: stack-overflow
-             title: global.stack_overflow
+            url: http://stackoverflow.com/users/2183369/titouanb
+            icon: stack-overflow
+            title: global.stack_overflow
         twitter:
-             url: https://twitter.com/titouan_benoit
-             icon: twitter
-             title: global.twitter
+            url: https://twitter.com/titouan_benoit
+            icon: twitter
+            title: global.twitter
         # facebook:
         #     title: global.facebook
         #     url: https://facebook.com/
@@ -79,9 +80,9 @@ sidebar:
         #     url: https://plus.google.com/
         #     icon: google-plus
         linked_in:
-             url: https://www.linkedin.com/in/titouanbenoit
-             icon: linkedin
-             title: global.linkedin
+            url: https://www.linkedin.com/in/titouanbenoit
+            icon: linkedin
+            title: global.linkedin
         # mail:
         #     title: global.mail
         #     url: mailto:
