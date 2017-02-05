@@ -4,9 +4,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://blog.nbcorp.fr/"/>
+  <link href="https://blog.nbcorp.fr/"/>
   <updated>2016-12-14T10:51:44.970Z</updated>
-  <id>http://blog.nbcorp.fr/</id>
+  <id>https://blog.nbcorp.fr/</id>
   
   <author>
     <name>Titouan BENOIT</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>Un workflow git sympa avec gitflow</title>
-    <link href="http://blog.nbcorp.fr/2016/12/13/Un-workflow-git-sympa-avec-gitflow/"/>
-    <id>http://blog.nbcorp.fr/2016/12/13/Un-workflow-git-sympa-avec-gitflow/</id>
+    <link href="https://blog.nbcorp.fr/2016/12/13/Un-workflow-git-sympa-avec-gitflow/"/>
+    <id>https://blog.nbcorp.fr/2016/12/13/Un-workflow-git-sympa-avec-gitflow/</id>
     <published>2016-12-12T23:05:24.000Z</published>
     <updated>2016-12-14T10:51:44.970Z</updated>
     
@@ -61,25 +61,25 @@
     
     </summary>
     
-      <category term="Développement" scheme="http://blog.nbcorp.fr/categories/Developpement/"/>
+      <category term="Développement" scheme="https://blog.nbcorp.fr/categories/Developpement/"/>
     
     
-      <category term="Git" scheme="http://blog.nbcorp.fr/tags/Git/"/>
+      <category term="Git" scheme="https://blog.nbcorp.fr/tags/Git/"/>
     
-      <category term="workflow" scheme="http://blog.nbcorp.fr/tags/workflow/"/>
+      <category term="workflow" scheme="https://blog.nbcorp.fr/tags/workflow/"/>
     
-      <category term="maintenable" scheme="http://blog.nbcorp.fr/tags/maintenable/"/>
+      <category term="maintenable" scheme="https://blog.nbcorp.fr/tags/maintenable/"/>
     
-      <category term="devops" scheme="http://blog.nbcorp.fr/tags/devops/"/>
+      <category term="devops" scheme="https://blog.nbcorp.fr/tags/devops/"/>
     
   </entry>
   
   <entry>
     <title>Développement d&#39;une application desktop maintenable en Python avec PyQt</title>
-    <link href="http://blog.nbcorp.fr/2015/07/29/developpement-dune-application-desktop-maintenable-en-python-avec-pyqt/"/>
-    <id>http://blog.nbcorp.fr/2015/07/29/developpement-dune-application-desktop-maintenable-en-python-avec-pyqt/</id>
+    <link href="https://blog.nbcorp.fr/2015/07/29/developpement-dune-application-desktop-maintenable-en-python-avec-pyqt/"/>
+    <id>https://blog.nbcorp.fr/2015/07/29/developpement-dune-application-desktop-maintenable-en-python-avec-pyqt/</id>
     <published>2015-07-29T12:11:55.000Z</published>
-    <updated>2016-12-14T10:51:44.966Z</updated>
+    <updated>2017-02-05T15:12:56.056Z</updated>
     
     <content type="html"><![CDATA[<p>Bonjour à tous,</p>
 <p>aujourd’hui je vais faire un petit tutoriel sur comment faire une application desktop en Python avec PyQt. Pour ceux qui ne connaissent pas <a href="http://www.qt.io/" target="_blank" rel="external">Qt</a>, c’est une librairie graphique qui fournit pas mal d’outils sympas pour faire des interfaces graphiques. Vraiment puissant et sympa à utiliser, je le conseille vivement pour des projets de toutes tailles qui ont besoin d’avoir un client desktop.</p>
@@ -156,7 +156,7 @@ pyuic4 myui.ui -o MyUI.py
 <li><a href="http://pyqt.sourceforge.net/Docs/PyQt4/classes.html" target="_blank" rel="external">http://pyqt.sourceforge.net/Docs/PyQt4/classes.html</a></li>
 </ul>
 <p>Après n’hésitez pas à chercher sur Google ;)</p>
-<p>Voici les sources du projet présenté dans ce post : <a href="http://blog.nbcorp.fr/wp-content/uploads/2015/07/example-py.zip">example-py</a></p>
+<p>Voici les sources du projet présenté dans ce post : <a href="https://github.com/Nightbr/pyqt-example" target="_blank" rel="external">https://github.com/Nightbr/pyqt-example</a></p>
 <p>Voili voilou ! Si vous avez des questions où des remarques, n’hésitez pas à les poster en commentaire !</p>
 ]]></content>
     
@@ -167,29 +167,29 @@ pyuic4 myui.ui -o MyUI.py
     
     </summary>
     
-      <category term="Développement" scheme="http://blog.nbcorp.fr/categories/Developpement/"/>
+      <category term="Développement" scheme="https://blog.nbcorp.fr/categories/Developpement/"/>
     
     
-      <category term="maintenable" scheme="http://blog.nbcorp.fr/tags/maintenable/"/>
+      <category term="maintenable" scheme="https://blog.nbcorp.fr/tags/maintenable/"/>
     
-      <category term="application" scheme="http://blog.nbcorp.fr/tags/application/"/>
+      <category term="application" scheme="https://blog.nbcorp.fr/tags/application/"/>
     
-      <category term="py2exe" scheme="http://blog.nbcorp.fr/tags/py2exe/"/>
+      <category term="py2exe" scheme="https://blog.nbcorp.fr/tags/py2exe/"/>
     
-      <category term="PyQt" scheme="http://blog.nbcorp.fr/tags/PyQt/"/>
+      <category term="PyQt" scheme="https://blog.nbcorp.fr/tags/PyQt/"/>
     
-      <category term="Python" scheme="http://blog.nbcorp.fr/tags/Python/"/>
+      <category term="Python" scheme="https://blog.nbcorp.fr/tags/Python/"/>
     
-      <category term="QtDesigner" scheme="http://blog.nbcorp.fr/tags/QtDesigner/"/>
+      <category term="QtDesigner" scheme="https://blog.nbcorp.fr/tags/QtDesigner/"/>
     
-      <category term="Scaffolding" scheme="http://blog.nbcorp.fr/tags/Scaffolding/"/>
+      <category term="Scaffolding" scheme="https://blog.nbcorp.fr/tags/Scaffolding/"/>
     
   </entry>
   
   <entry>
     <title>OHA : Open Home Automation</title>
-    <link href="http://blog.nbcorp.fr/2015/02/15/oha-open-home-automation/"/>
-    <id>http://blog.nbcorp.fr/2015/02/15/oha-open-home-automation/</id>
+    <link href="https://blog.nbcorp.fr/2015/02/15/oha-open-home-automation/"/>
+    <id>https://blog.nbcorp.fr/2015/02/15/oha-open-home-automation/</id>
     <published>2015-02-15T10:25:47.000Z</published>
     <updated>2016-12-14T10:51:44.968Z</updated>
     
@@ -228,34 +228,34 @@ pyuic4 myui.ui -o MyUI.py
     
     </summary>
     
-      <category term="Domotique" scheme="http://blog.nbcorp.fr/categories/Domotique/"/>
+      <category term="Domotique" scheme="https://blog.nbcorp.fr/categories/Domotique/"/>
     
     
-      <category term="Python" scheme="http://blog.nbcorp.fr/tags/Python/"/>
+      <category term="Python" scheme="https://blog.nbcorp.fr/tags/Python/"/>
     
-      <category term="API" scheme="http://blog.nbcorp.fr/tags/API/"/>
+      <category term="API" scheme="https://blog.nbcorp.fr/tags/API/"/>
     
-      <category term="Arduino" scheme="http://blog.nbcorp.fr/tags/Arduino/"/>
+      <category term="Arduino" scheme="https://blog.nbcorp.fr/tags/Arduino/"/>
     
-      <category term="Automation" scheme="http://blog.nbcorp.fr/tags/Automation/"/>
+      <category term="Automation" scheme="https://blog.nbcorp.fr/tags/Automation/"/>
     
-      <category term="Connecté" scheme="http://blog.nbcorp.fr/tags/Connecte/"/>
+      <category term="Connecté" scheme="https://blog.nbcorp.fr/tags/Connecte/"/>
     
-      <category term="domotique" scheme="http://blog.nbcorp.fr/tags/domotique/"/>
+      <category term="domotique" scheme="https://blog.nbcorp.fr/tags/domotique/"/>
     
-      <category term="Home" scheme="http://blog.nbcorp.fr/tags/Home/"/>
+      <category term="Home" scheme="https://blog.nbcorp.fr/tags/Home/"/>
     
-      <category term="IoT" scheme="http://blog.nbcorp.fr/tags/IoT/"/>
+      <category term="IoT" scheme="https://blog.nbcorp.fr/tags/IoT/"/>
     
-      <category term="OHA" scheme="http://blog.nbcorp.fr/tags/OHA/"/>
+      <category term="OHA" scheme="https://blog.nbcorp.fr/tags/OHA/"/>
     
-      <category term="OpenSource" scheme="http://blog.nbcorp.fr/tags/OpenSource/"/>
+      <category term="OpenSource" scheme="https://blog.nbcorp.fr/tags/OpenSource/"/>
     
-      <category term="Projet" scheme="http://blog.nbcorp.fr/tags/Projet/"/>
+      <category term="Projet" scheme="https://blog.nbcorp.fr/tags/Projet/"/>
     
-      <category term="PRT5" scheme="http://blog.nbcorp.fr/tags/PRT5/"/>
+      <category term="PRT5" scheme="https://blog.nbcorp.fr/tags/PRT5/"/>
     
-      <category term="RF433" scheme="http://blog.nbcorp.fr/tags/RF433/"/>
+      <category term="RF433" scheme="https://blog.nbcorp.fr/tags/RF433/"/>
     
   </entry>
   
