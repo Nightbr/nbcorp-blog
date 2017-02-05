@@ -24,4 +24,4 @@ Plugins:
 - [x] writting workflow
 - [x] moar doc here
 - [x] begin to write!
-- [ ] https...
+- [ ] https... [cloudflare tutoriel](https://sheharyar.me/blog/free-ssl-for-github-pages-with-custom-domains/)

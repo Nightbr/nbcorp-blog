@@ -286,6 +286,6 @@ Voici les deux endroits où vous pourrez trouver des informations pour PyQt :
 
 Après n'hésitez pas à chercher sur Google ;)
 
-Voici les sources du projet présenté dans ce post : <a href="http://blog.nbcorp.fr/wp-content/uploads/2015/07/example-py.zip">example-py</a>
+Voici les sources du projet présenté dans ce post : <https://github.com/Nightbr/pyqt-example>
 
 Voili voilou ! Si vous avez des questions où des remarques, n'hésitez pas à les poster en commentaire !
