@@ -4,7 +4,7 @@ tags:
     - security
     - oauth
     - api
-    - financial
+    - banking
 categories:
     - Sécurité
 ---
